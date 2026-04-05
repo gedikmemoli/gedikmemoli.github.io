@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Ali Gedik | Game Designer</title>
+    <title>Mehmet Ali Gedik | Oyun Tasarımcısı</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body {
@@ -16,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            position: relative; /* Dil butonu için gerekli */
+            position: relative;
         }
         .container {
             max-width: 900px;
@@ -131,11 +131,11 @@
             line-height: 1.5;
         }
         .project-tech {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #ff3e3e;
             margin-bottom: 15px;
             font-weight: bold;
-            text-transform: uppercase;
+            /* text-transform: uppercase; Kodu silindi, artık tam yazıldığı gibi görünecek */
         }
         .play-btn {
             display: inline-block;
@@ -178,6 +178,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap; /* Mobilde sığması için */
         }
         .social-btn {
             display: flex;
@@ -209,9 +210,9 @@
 
     <div class="container">
         <h1>MEHMET ALİ GEDİK</h1>
-        <p>Game Designer</p>
+        <p>Oyun Tasarımcısı</p>
 
-        <h2 class="section-title">GAMES / PROJECTS</h2>
+        <h2 class="section-title">OYUNLAR VE PROJELER</h2>
         
         <div class="projects-grid">
             
@@ -233,44 +234,50 @@
 
             <div class="project-card">
                 <div class="project-img">GIF / Görsel Gelecek</div>
-                <h3 class="project-title">Mind Cafe</h3>
+                <h3 class="project-title">Mind Café</h3>
                 <div class="project-tech">Unity • Mobil</div>
                 <p class="project-desc">Rahatlatıcı atmosferi ve zeka geliştirici bulmacalarıyla oyunculara sakin bir mobil kafe yönetimi sunan konsept.</p>
-                <a href="#" class="play-btn" target="_blank">İncele</a>
+                <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">İncele</a>
             </div>
 
         </div>
 
         <div class="wip-card">
-            <div class="wip-label">🚧 Currently Working On 🚧</div>
+            <div class="wip-label">🚧 Geliştirme Aşamasında 🚧</div>
             <h3 class="wip-title">Do Something but Don't Die</h3>
-            <p class="project-desc" style="margin-bottom:0;">2D Roguelike Card Game</p>
+            <p class="project-desc" style="margin-bottom:0;">2D Roguelike Kart Oyunu</p>
         </div>
 
         <a href="mailto:mehmetali@gedik.games" class="btn">İletişime Geç</a>
 
         <div class="social-links">
-            <a href="https://instagram.com/KULLANICI_ADIN" target="_blank" class="social-btn" title="Instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
             
-            <a href="https://KULLANICI_ADIN.itch.io" target="_blank" class="social-btn" title="Itch.io">
+            <a href="https://www.linkedin.com/in/mehmet-ali-gedik-4412b135b/" target="_blank" class="social-btn" title="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+
+            <a href="https://gedikmemoli.itch.io" target="_blank" class="social-btn" title="Itch.io">
                 <svg viewBox="0 0 24 24">
                     <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                 </svg>
             </a>
 
-            <a href="https://x.com/KULLANICI_ADIN" target="_blank" class="social-btn" title="X (Twitter)">
+            <a href="https://www.instagram.com/gedikmemoli" target="_blank" class="social-btn" title="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+
+            <a href="https://x.com/gedikmemoli" target="_blank" class="social-btn" title="X (Twitter)">
                 <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
 
-            <a href="https://youtube.com/@KULLANICI_ADIN" target="_blank" class="social-btn" title="YouTube">
+            <a href="https://www.youtube.com/@gedikmemoli" target="_blank" class="social-btn" title="YouTube">
                 <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
+
         </div>
 
         <div class="footer">
-            &copy; 2026 Gedik Games. All rights reserved.
+            &copy; 2026 Gedik Games. Tüm hakları saklıdır.
         </div>
     </div>
 
