@@ -11,43 +11,56 @@
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 40px 0; /* Sayfa uzayacağı için padding ekledik */
+            padding: 40px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            position: relative; /* Dil butonu için gerekli */
         }
         .container {
             max-width: 900px;
             padding: 20px;
             width: 100%;
         }
+
+        /* --- DİL SEÇENEĞİ BUTONU --- */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .lang-switch a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .lang-switch a.active {
+            color: #ff3e3e;
+        }
+        .lang-switch a:hover {
+            color: #fff;
+        }
+
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
             color: #ff3e3e;
             text-transform: uppercase;
             letter-spacing: 3px;
+            margin-top: 20px;
         }
         p {
             font-size: 1.2rem;
             color: #a0a0a0;
             margin-bottom: 30px;
         }
-        .skills { margin-top: 20px; }
-        .badge {
-            display: inline-block;
-            background: #1f1f1f;
-            color: #fff;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 5px;
-            border: 1px solid #333;
-            font-size: 0.9rem;
-        }
-        .badge.unity { border-color: #808080; color: #fff; }
-        .badge.cpp { border-color: #00599C; color: #61bafc; }
-        .badge.pixel { border-color: #ff00ff; color: #ff80ff; }
         
         .btn {
             display: inline-block;
@@ -65,9 +78,9 @@
             background-color: #e62e2e;
         }
 
-        /* --- YENİ: OYUN KARTLARI STİLİ --- */
+        /* --- OYUN KARTLARI STİLİ --- */
         .section-title {
-            margin-top: 60px;
+            margin-top: 20px;
             margin-bottom: 30px;
             font-size: 2rem;
             color: #fff;
@@ -96,7 +109,7 @@
         .project-img {
             width: 100%;
             height: 160px;
-            background-color: #2a2a2a; /* Resim gelene kadar yer tutucu renk */
+            background-color: #2a2a2a;
             border-radius: 5px;
             margin-bottom: 15px;
             object-fit: cover;
@@ -122,6 +135,7 @@
             color: #ff3e3e;
             margin-bottom: 15px;
             font-weight: bold;
+            text-transform: uppercase;
         }
         .play-btn {
             display: inline-block;
@@ -134,6 +148,29 @@
             transition: background 0.2s;
         }
         .play-btn:hover { background-color: #ff3e3e; }
+
+        /* --- CURRENTLY WORKING ON KARTI --- */
+        .wip-card {
+            background: linear-gradient(145deg, #1a1a1a, #121212);
+            border: 1px dashed #ff3e3e;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .wip-label {
+            color: #ff3e3e;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .wip-title {
+            font-size: 1.6rem;
+            color: #fff;
+            margin: 0 0 5px 0;
+        }
 
         /* SOSYAL MEDYA */
         .social-links {
@@ -166,16 +203,13 @@
 </head>
 <body>
 
+    <div class="lang-switch">
+        <a href="index.html" class="active">TR</a> | <a href="en.html">EN</a>
+    </div>
+
     <div class="container">
         <h1>MEHMET ALİ GEDİK</h1>
         <p>Game Designer</p>
-
-        <div class="skills">
-            <span class="badge unity">Unity 2D/3D</span>
-            <span class="badge cpp">C++</span>
-            <span class="badge pixel">Aseprite</span>
-            <span class="badge">Spine Animation</span>
-        </div>
 
         <h2 class="section-title">GAMES / PROJECTS</h2>
         
@@ -183,28 +217,34 @@
             
             <div class="project-card">
                 <div class="project-img">GIF / Görsel Gelecek</div>
-                <h3 class="project-title">Do Something but Don't Die</h3>
-                <div class="project-tech">Unity • 2D • Aseprite</div>
-                <p class="project-desc">Karanlık ve sürükleyici bir atmosfere sahip, orta çağ temalı 2D roguelike kart oyunu.</p>
-                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+                <h3 class="project-title">Living Cells</h3>
+                <div class="project-tech">Game Maker • PC</div>
+                <p class="project-desc">Hücresel yapılar ve hayatta kalma mekanikleri üzerine kurulu, stratejik düşünmeyi gerektiren özgün bir deneyim.</p>
+                <a href="#" class="play-btn" target="_blank">İncele</a>
             </div>
 
             <div class="project-card">
                 <div class="project-img">GIF / Görsel Gelecek</div>
-                <h3 class="project-title">Enzo De Luca</h3>
-                <div class="project-tech">Unity • C++ • Spine</div>
-                <p class="project-desc">Aksiyon dolu mekanikleri ve akıcı animasyonlarıyla öne çıkan 2D Side Scroller Beat 'em up projesi.</p>
-                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+                <h3 class="project-title">Kelime Oyunu +</h3>
+                <div class="project-tech">Unity • PC</div>
+                <p class="project-desc">Gelişmiş mekanikleri, kelime dağarcığını zorlayan yapısı ve temiz arayüzü ile modern bir bulmaca deneyimi.</p>
+                <a href="#" class="play-btn" target="_blank">İncele</a>
             </div>
 
             <div class="project-card">
                 <div class="project-img">GIF / Görsel Gelecek</div>
-                <h3 class="project-title">Word Game Project</h3>
-                <div class="project-tech">Unity • UI Design</div>
-                <p class="project-desc">Gelişmiş admin paneli, zamanlayıcı sistemleri ve temiz bir kullanıcı arayüzü barındıran kelime bulmaca oyunu.</p>
-                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+                <h3 class="project-title">Mind Cafe</h3>
+                <div class="project-tech">Unity • Mobil</div>
+                <p class="project-desc">Rahatlatıcı atmosferi ve zeka geliştirici bulmacalarıyla oyunculara sakin bir mobil kafe yönetimi sunan konsept.</p>
+                <a href="#" class="play-btn" target="_blank">İncele</a>
             </div>
 
+        </div>
+
+        <div class="wip-card">
+            <div class="wip-label">🚧 Currently Working On 🚧</div>
+            <h3 class="wip-title">Do Something but Don't Die</h3>
+            <p class="project-desc" style="margin-bottom:0;">2D Roguelike Card Game</p>
         </div>
 
         <a href="mailto:mehmetali@gedik.games" class="btn">İletişime Geç</a>
