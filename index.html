@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Ali Gedik</title>
+    <title>Mehmet Ali Gedik | Game Designer</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body {
@@ -11,21 +11,21 @@
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 40px 0; /* Sayfa uzayacağı için padding ekledik */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             padding: 20px;
+            width: 100%;
         }
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            color: #ff3e3e; /* Enzo De Luca kırmızısı */
+            color: #ff3e3e;
             text-transform: uppercase;
             letter-spacing: 3px;
         }
@@ -34,9 +34,7 @@
             color: #a0a0a0;
             margin-bottom: 30px;
         }
-        .skills {
-            margin-top: 20px;
-        }
+        .skills { margin-top: 20px; }
         .badge {
             display: inline-block;
             background: #1f1f1f;
@@ -67,9 +65,79 @@
             background-color: #e62e2e;
         }
 
-        /* YENİ EKLENEN: SOSYAL MEDYA STİLLERİ */
+        /* --- YENİ: OYUN KARTLARI STİLİ --- */
+        .section-title {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #fff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff3e3e;
+        }
+        .project-img {
+            width: 100%;
+            height: 160px;
+            background-color: #2a2a2a; /* Resim gelene kadar yer tutucu renk */
+            border-radius: 5px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .project-title {
+            font-size: 1.4rem;
+            color: #fff;
+            margin: 0 0 10px 0;
+        }
+        .project-desc {
+            font-size: 0.95rem;
+            color: #aaa;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .project-tech {
+            font-size: 0.8rem;
+            color: #ff3e3e;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .play-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .play-btn:hover { background-color: #ff3e3e; }
+
+        /* SOSYAL MEDYA */
         .social-links {
-            margin-top: 30px;
+            margin-top: 50px;
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -86,23 +154,14 @@
             color: #a0a0a0;
             transition: all 0.3s ease;
         }
-        .social-btn svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
+        .social-btn svg { width: 22px; height: 22px; fill: currentColor; }
         .social-btn:hover {
             background-color: #ff3e3e;
             color: white;
             border-color: #ff3e3e;
             transform: translateY(-3px);
         }
-
-        .footer {
-            margin-top: 60px;
-            font-size: 0.8rem;
-            color: #555;
-        }
+        .footer { margin-top: 60px; font-size: 0.8rem; color: #555; }
     </style>
 </head>
 <body>
@@ -111,34 +170,63 @@
         <h1>MEHMET ALİ GEDİK</h1>
         <p>Game Designer</p>
 
-        <div style="margin-top: 40px; line-height: 1.6;">
-            Currently working on <br>
-            <strong style="color:white; font-size:1.4rem;">Do Something but Don't Die</strong><br>
-            <span style="font-size:0.9rem;">(2D Roguelike Card Game)</span>
+        <div class="skills">
+            <span class="badge unity">Unity 2D/3D</span>
+            <span class="badge cpp">C++</span>
+            <span class="badge pixel">Aseprite</span>
+            <span class="badge">Spine Animation</span>
+        </div>
+
+        <h2 class="section-title">GAMES / PROJECTS</h2>
+        
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-img">GIF / Görsel Gelecek</div>
+                <h3 class="project-title">Do Something but Don't Die</h3>
+                <div class="project-tech">Unity • 2D • Aseprite</div>
+                <p class="project-desc">Karanlık ve sürükleyici bir atmosfere sahip, orta çağ temalı 2D roguelike kart oyunu.</p>
+                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">GIF / Görsel Gelecek</div>
+                <h3 class="project-title">Enzo De Luca</h3>
+                <div class="project-tech">Unity • C++ • Spine</div>
+                <p class="project-desc">Aksiyon dolu mekanikleri ve akıcı animasyonlarıyla öne çıkan 2D Side Scroller Beat 'em up projesi.</p>
+                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">GIF / Görsel Gelecek</div>
+                <h3 class="project-title">Word Game Project</h3>
+                <div class="project-tech">Unity • UI Design</div>
+                <p class="project-desc">Gelişmiş admin paneli, zamanlayıcı sistemleri ve temiz bir kullanıcı arayüzü barındıran kelime bulmaca oyunu.</p>
+                <a href="#" class="play-btn" target="_blank">Oyna / İncele</a>
+            </div>
+
         </div>
 
         <a href="mailto:mehmetali@gedik.games" class="btn">İletişime Geç</a>
 
         <div class="social-links">
-            
-            <a href="https://instagram.com/gedikmemoli" target="_blank" class="social-btn" title="Instagram">
+            <a href="https://instagram.com/KULLANICI_ADIN" target="_blank" class="social-btn" title="Instagram">
                 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-
-           <a href="https://gedikmemoli.itch.io" target="_blank" class="social-btn" title="Itch.io">
+            
+            <a href="https://KULLANICI_ADIN.itch.io" target="_blank" class="social-btn" title="Itch.io">
                 <svg viewBox="0 0 24 24">
                     <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                 </svg>
             </a>
 
-            <a href="https://x.com/gedikmemoli" target="_blank" class="social-btn" title="X">
+            <a href="https://x.com/KULLANICI_ADIN" target="_blank" class="social-btn" title="X (Twitter)">
                 <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
 
-            <a href="https://youtube.com/@keepWithGEDIK" target="_blank" class="social-btn" title="YouTube">
+            <a href="https://youtube.com/@KULLANICI_ADIN" target="_blank" class="social-btn" title="YouTube">
                 <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
-
         </div>
 
         <div class="footer">
