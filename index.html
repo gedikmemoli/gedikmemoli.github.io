@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Ali Gedik | Oyun Tasarımcısı</title>
+    <title>Mehmet Ali Gedik | Game Designer</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body {
@@ -62,20 +62,32 @@
             margin-bottom: 30px;
         }
         
+        /* --- YENİ İLETİŞİM BUTONU STİLİ --- */
         .btn {
             display: inline-block;
             margin-top: 40px;
             padding: 12px 30px;
             background-color: #ff3e3e;
             color: white;
-            text-decoration: none;
             font-weight: bold;
             border-radius: 30px;
-            transition: transform 0.2s, background 0.2s;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            white-space: nowrap; /* Metnin alt satıra kaymasını engeller */
+            overflow: hidden;
+            user-select: all; /* Kullanıcının maili kolayca kopyalamasını sağlar */
         }
         .btn:hover {
             transform: scale(1.05);
             background-color: #e62e2e;
+        }
+        /* Buton tıklandıktan sonraki hali */
+        .btn.expanded {
+            background-color: #1f1f1f;
+            border: 1px solid #ff3e3e;
+            color: #ff3e3e;
+            padding: 12px 40px; /* Genişleme efekti için */
+            cursor: text;
         }
 
         /* --- OYUN KARTLARI STİLİ --- */
@@ -135,7 +147,6 @@
             color: #ff3e3e;
             margin-bottom: 15px;
             font-weight: bold;
-            /* text-transform: uppercase; Kodu silindi, artık tam yazıldığı gibi görünecek */
         }
         .play-btn {
             display: inline-block;
@@ -178,7 +189,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap; /* Mobilde sığması için */
+            flex-wrap: wrap;
         }
         .social-btn {
             display: flex;
@@ -205,50 +216,50 @@
 <body>
 
     <div class="lang-switch">
-        <a href="index.html" class="active">TR</a> | <a href="en.html">EN</a>
+        <a href="tr.html">TR</a> | <a href="index.html" class="active">EN</a>
     </div>
 
     <div class="container">
         <h1>MEHMET ALİ GEDİK</h1>
-        <p>Oyun Tasarımcısı</p>
+        <p>Game Designer</p>
 
-        <h2 class="section-title">OYUNLAR VE PROJELER</h2>
+        <h2 class="section-title">GAMES & PROJECTS</h2>
         
         <div class="projects-grid">
             
             <div class="project-card">
-                <div class="project-img">GIF / Görsel Gelecek</div>
+                <div class="project-img">GIF / Image Here</div>
                 <h3 class="project-title">Living Cells</h3>
                 <div class="project-tech">Game Maker • PC</div>
-                <p class="project-desc">Hücresel yapılar ve hayatta kalma mekanikleri üzerine kurulu, stratejik düşünmeyi gerektiren özgün bir deneyim.</p>
-                <a href="#" class="play-btn" target="_blank">İncele</a>
+                <p class="project-desc">A unique experience based on cellular structures and survival mechanics, requiring strategic thinking.</p>
+                <a href="#" class="play-btn" target="_blank">View</a>
             </div>
 
             <div class="project-card">
-                <div class="project-img">GIF / Görsel Gelecek</div>
+                <div class="project-img">GIF / Image Here</div>
                 <h3 class="project-title">Kelime Oyunu +</h3>
                 <div class="project-tech">Unity • PC</div>
-                <p class="project-desc">Gelişmiş mekanikleri, kelime dağarcığını zorlayan yapısı ve temiz arayüzü ile modern bir bulmaca deneyimi.</p>
-                <a href="#" class="play-btn" target="_blank">İncele</a>
+                <p class="project-desc">A modern puzzle experience with advanced mechanics, a vocabulary-challenging structure, and a clean interface.</p>
+                <a href="#" class="play-btn" target="_blank">View</a>
             </div>
 
             <div class="project-card">
-                <div class="project-img">GIF / Görsel Gelecek</div>
+                <div class="project-img">GIF / Image Here</div>
                 <h3 class="project-title">Mind Café</h3>
                 <div class="project-tech">Unity • Mobil</div>
-                <p class="project-desc">Rahatlatıcı atmosferi ve zeka geliştirici bulmacalarıyla oyunculara sakin bir mobil kafe yönetimi sunan konsept.</p>
-                <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">İncele</a>
+                <p class="project-desc">A mobile cafe management concept offering players a peaceful experience with its relaxing atmosphere and brain-teasing puzzles.</p>
+                <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">View</a>
             </div>
 
         </div>
 
         <div class="wip-card">
-            <div class="wip-label">🚧 Geliştirme Aşamasında 🚧</div>
+            <div class="wip-label">🚧 Currently Working On 🚧</div>
             <h3 class="wip-title">Do Something but Don't Die</h3>
-            <p class="project-desc" style="margin-bottom:0;">2D Roguelike Kart Oyunu</p>
+            <p class="project-desc" style="margin-bottom:0;">2D Roguelike Card Game</p>
         </div>
 
-        <a href="mailto:mehmetali@gedik.games" class="btn">İletişime Geç</a>
+        <div id="contactBtn" class="btn" onclick="revealEmail()">Contact Me</div>
 
         <div class="social-links">
             
@@ -257,9 +268,7 @@
             </a>
 
             <a href="https://gedikmemoli.itch.io" target="_blank" class="social-btn" title="Itch.io">
-                <svg viewBox="0 0 24 24">
-                    <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
             </a>
 
             <a href="https://www.instagram.com/gedikmemoli" target="_blank" class="social-btn" title="Instagram">
@@ -277,9 +286,18 @@
         </div>
 
         <div class="footer">
-            &copy; 2026 Gedik Games. Tüm hakları saklıdır.
+            &copy; 2026 Gedik Games. All rights reserved.
         </div>
     </div>
+
+    <script>
+        function revealEmail() {
+            const btn = document.getElementById('contactBtn');
+            btn.textContent = 'mehmetali@gedik.games';
+            btn.classList.add('expanded'); // CSS'teki yeni tasarımı uygular
+            btn.onclick = null; // Bir daha tıklanmasını engeller
+        }
+    </script>
 
 </body>
 </html>
