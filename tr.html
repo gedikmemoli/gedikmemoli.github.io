@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Ali Gedik | Oyun Tasarımcısı</title>
+    <title>Mehmet Ali Gedik | Game Designer</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         body {
@@ -48,18 +48,61 @@
             color: #fff;
         }
 
+        /* --- PROFIL FOTOĞRAFI ALANI --- */
+        .profile-container {
+            width: 240px; 
+            height: 240px; 
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            border: 4px solid #ff3e3e;
+            box-shadow: 0 0 25px rgba(255, 62, 62, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .profile-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 35px rgba(255, 62, 62, 0.6);
+        }
+        .profile-container:hover .profile-img {
+            transform: scale(1.05);
+        }
+
         h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: #ff3e3e;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        p {
+        .subtitle {
             font-size: 1.2rem;
             color: #a0a0a0;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* --- KİŞİSEL BİLGİLER / BIO KART --- */
+        .bio-card {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto 30px auto;
+            max-width: 650px;
+            text-align: center;
+        }
+        .bio-text {
+            font-size: 1rem;
+            color: #cccccc;
+            line-height: 1.6;
+            margin: 0;
         }
         
         /* --- YENİ İLETİŞİM BUTONU STİLİ --- */
@@ -75,7 +118,6 @@
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             white-space: nowrap; 
             overflow: hidden;
-            user-select: all; 
         }
         .btn:hover {
             transform: scale(1.05);
@@ -84,26 +126,45 @@
         .btn.expanded {
             background-color: #1f1f1f;
             border: 1px solid #ff3e3e;
+            padding: 0; 
+        }
+        .btn.expanded a {
+            display: block;
+            padding: 12px 40px;
             color: #ff3e3e;
-            padding: 12px 40px; 
-            cursor: text;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn.expanded a:hover {
+            color: #fff;
         }
 
-        /* --- OYUN KARTLARI STİLİ --- */
+        /* --- OYUN KARTLARI VE KATEGORİ STİLLERİ --- */
         .section-title {
             margin-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 2rem;
             color: #fff;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             display: inline-block;
         }
+        .category-title {
+            font-size: 1.3rem;
+            color: #ff3e3e;
+            text-align: left;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 3px solid #ff3e3e;
+            padding-left: 10px;
+        }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .project-card {
             background-color: #1a1a1a;
@@ -219,45 +280,76 @@
     </div>
 
     <div class="container">
+        
+        <!-- PROFIL FOTOĞRAFI ALANI -->
+        <div class="profile-container">
+            <img src="1cepete1.webp" alt="Mehmet Ali Gedik" class="profile-img">
+        </div>
+
         <h1>MEHMET ALİ GEDİK</h1>
-        <p>Oyun Tasarımcısı</p>
+        <div class="subtitle">Oyun Tasarımcısı</div>
+
+        <!-- KİŞİSEL BİLGİLER / HAKKINDA -->
+        <div class="bio-card">
+            <p class="bio-text">
+                Temel mekanikler, sistem tasarımı ve etkileşimli oynanış üzerine uzmanlaşan Oyun Tasarımcısı. Şu anda Kahramanmaraş İstiklal Üniversitesi'nde Dijital Oyun Tasarımı bölümünde eğitimime devam ediyorum ve Antalya, Kemer'de yaşıyorum. Unity kullanarak sürükleyici bilgisayar ve mobil deneyimlerini hayata geçirme konusunda tutkuluyum.
+            </p>
+        </div>
 
         <h2 class="section-title">OYUNLAR VE PROJELER</h2>
         
+        <!-- PC OYUNLARI -->
+        <div class="category-title">💻 PC Oyunları</div>
         <div class="projects-grid">
             
             <div class="project-card">
                 <img src="living-cells.png" alt="Living Cells" class="project-img">
                 <h3 class="project-title">Living Cells</h3>
-                <div class="project-tech">Game Maker • PC</div>
-                <p class="project-desc">Hücresel yapılar ve hayatta kalma mekanikleri üzerine kurulu, stratejik düşünmeyi gerektiren özgün bir deneyim.</p>
+                <div class="project-tech">PC</div>
+                <p class="project-desc">Ana hedefin son patronu yenmek ve esir ruhları serbest bırakmak olduğu, platform türünde bir macera oyunu.</p>
                 <a href="https://gedikmemoli.itch.io/living-cells" class="play-btn" target="_blank">İncele</a>
             </div>
 
             <div class="project-card">
-                <img src="kelime-oyunu.png" alt="Kelime Oyunu" class="project-img">
+                <img src="kelime-oyunu.png" alt="Kelime Oyunu +" class="project-img">
                 <h3 class="project-title">Kelime Oyunu +</h3>
                 <div class="project-tech">Unity • PC</div>
-                <p class="project-desc">Gelişmiş mekanikleri, kelime dağarcığını zorlayan yapısı ve temiz arayüzü ile modern bir bulmaca deneyimi.</p>
+                <p class="project-desc">Admin paneli içeren, çok oyunculu bir kelime oyunu deneyimi. Bir kişinin oyunu yönettiği, diğerlerinin ise oyuncu olduğu interaktif bir grup aktivitesi sunuyor.</p>
                 <a href="#" class="play-btn" target="_blank">İncele</a>
             </div>
+
+        </div>
+
+        <!-- MOBİL OYUNLAR -->
+        <div class="category-title">📱 Mobil Oyunlar</div>
+        <div class="projects-grid">
 
             <div class="project-card">
                 <img src="mind-cafe.png" alt="Mind Cafe" class="project-img">
                 <h3 class="project-title">Mind Café</h3>
                 <div class="project-tech">Unity • Mobil</div>
-                <p class="project-desc">Rahatlatıcı atmosferi ve zeka geliştirici bulmacalarıyla oyunculara sakin bir mobil kafe yönetimi sunan konsept.</p>
-                <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">İncele</a>
+                <p class="project-desc">Oyunculara huzurlu bir deneyim sunan mobil bir kafe yönetim konsepti. Mutfağı yönetin, siparişlere uygun içecekleri hazırlayın ve dinlendirici bir atmosferde müşterilerinize servis yapın.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.istiklal.doga.y2026.mindcafe" class="play-btn" target="_blank">İncele</a>
+            </div>
+
+            <div class="project-card">
+                <img src="kelime-kultur-kemer.png" alt="Kelime Kültür Kemer" class="project-img">
+                <h3 class="project-title">Kelime Kültür Kemer</h3>
+                <div class="project-tech">Unity • Mobil</div>
+                <p class="project-desc">Oyuncuların boş karolara gelmesi gereken doğru kelimeleri bularak kelime dağarcıklarını test ettikleri çengel bulmaca tarzı bir oyun.</p>
+                <a href="#" class="play-btn" target="_blank">İncele</a>
             </div>
 
         </div>
 
+        <!-- CURRENTLY WORKING ON -->
         <div class="wip-card">
-            <div class="wip-label">🚧 Geliştirme Aşamasında 🚧</div>
+            <div class="wip-label">🚧 Şu An Üzerinde Çalıştığım 🚧</div>
             <h3 class="wip-title">Do Something but Don't Die</h3>
             <p class="project-desc" style="margin-bottom:0;">2D Roguelike Kart Oyunu</p>
         </div>
 
+        <!-- İLETİŞİM BUTONU -->
         <div id="contactBtn" class="btn" onclick="revealEmail()">İletişime Geç</div>
 
         <div class="social-links">
@@ -292,9 +384,10 @@
     <script>
         function revealEmail() {
             const btn = document.getElementById('contactBtn');
-            btn.textContent = 'mehmetali@gedik.games';
-            btn.classList.add('expanded'); 
-            btn.onclick = null; 
+            // Yeni HTML içeriği (mailto linki ile)
+            btn.innerHTML = '<a href="mailto:mehmetali@gedik.games">mehmetali@gedik.games</a>';
+            btn.classList.add('expanded');
+            btn.onclick = null;
         }
     </script>
 
