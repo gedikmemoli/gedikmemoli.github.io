@@ -48,14 +48,14 @@
             color: #fff;
         }
 
-        /* --- PROFIL FOTOĞRAFI ALANI --- */
+        /* --- PROFIL FOTOĞRAFI ALANI (BÜYÜTÜLDÜ) --- */
         .profile-container {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 15px auto;
+            width: 240px; /* %50 Büyütüldü */
+            height: 240px; /* %50 Büyütüldü */
+            margin: 0 auto 20px auto;
             border-radius: 50%;
-            border: 3px solid #ff3e3e;
-            box-shadow: 0 0 20px rgba(255, 62, 62, 0.25);
+            border: 4px solid #ff3e3e;
+            box-shadow: 0 0 25px rgba(255, 62, 62, 0.3);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -66,11 +66,11 @@
             transition: transform 0.3s ease;
         }
         .profile-container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 62, 62, 0.5);
+            transform: scale(1.03);
+            box-shadow: 0 0 35px rgba(255, 62, 62, 0.6);
         }
         .profile-container:hover .profile-img {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         h1 {
@@ -105,7 +105,7 @@
             margin: 0;
         }
         
-        /* --- YENİ İLETİŞİM BUTONU STİLİ --- */
+        /* --- YENİ İLETİŞİM BUTONU STİLİ (MAILTO EKLENDİ) --- */
         .btn {
             display: inline-block;
             margin-top: 40px;
@@ -118,7 +118,6 @@
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             white-space: nowrap; 
             overflow: hidden;
-            user-select: all; 
         }
         .btn:hover {
             transform: scale(1.05);
@@ -127,9 +126,17 @@
         .btn.expanded {
             background-color: #1f1f1f;
             border: 1px solid #ff3e3e;
+            padding: 0; 
+        }
+        .btn.expanded a {
+            display: block;
+            padding: 12px 40px;
             color: #ff3e3e;
-            padding: 12px 40px; 
-            cursor: text;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn.expanded a:hover {
+            color: #fff;
         }
 
         /* --- OYUN KARTLARI VE KATEGORİ STİLLERİ --- */
@@ -280,12 +287,12 @@
         </div>
 
         <h1>MEHMET ALİ GEDİK</h1>
-        <div class="subtitle">Game Designer & Developer</div>
+        <div class="subtitle">Game Designer</div>
 
         <!-- KİŞİSEL BİLGİLER / HAKKINDA -->
         <div class="bio-card">
             <p class="bio-text">
-                Game Designer & Developer specializing in core mechanics, systems design, and interactive gameplay. Passionate about bringing engaging PC and mobile experiences to life using Unity & GameMaker.
+                Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş İstiklal Üniversitesi and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life using Unity.
             </p>
         </div>
 
@@ -298,8 +305,8 @@
             <div class="project-card">
                 <img src="living-cells.png" alt="Living Cells" class="project-img">
                 <h3 class="project-title">Living Cells</h3>
-                <div class="project-tech">Game Maker • PC</div>
-                <p class="project-desc">A unique experience based on cellular structures and survival mechanics, requiring strategic thinking.</p>
+                <div class="project-tech">PC</div>
+                <p class="project-desc">A platformer adventure game where the main objective is to defeat the final boss and set the captive souls free.</p>
                 <a href="https://gedikmemoli.itch.io/living-cells" class="play-btn" target="_blank">View</a>
             </div>
 
@@ -307,7 +314,7 @@
                 <img src="kelime-oyunu.png" alt="Kelime Oyunu +" class="project-img">
                 <h3 class="project-title">Kelime Oyunu +</h3>
                 <div class="project-tech">Unity • PC</div>
-                <p class="project-desc">A modern puzzle experience with advanced mechanics, a vocabulary-challenging structure, and a clean interface.</p>
+                <p class="project-desc">A multiplayer word game experience featuring an admin panel. One person acts as the game master while the others play, offering an interactive group activity.</p>
                 <a href="#" class="play-btn" target="_blank">View</a>
             </div>
 
@@ -321,15 +328,15 @@
                 <img src="mind-cafe.png" alt="Mind Cafe" class="project-img">
                 <h3 class="project-title">Mind Café</h3>
                 <div class="project-tech">Unity • Mobile</div>
-                <p class="project-desc">A mobile cafe management concept offering players a peaceful experience with its relaxing atmosphere and brain-teasing puzzles.</p>
-                <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">View</a>
+                <p class="project-desc">A mobile cafe management concept offering players a peaceful experience. Manage the kitchen, prepare the right drinks according to orders, and serve your customers in a relaxing atmosphere.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.istiklal.doga.y2026.mindcafe" class="play-btn" target="_blank">View</a>
             </div>
 
             <div class="project-card">
                 <img src="kelime-kultur-kemer.png" alt="Kelime Kültür Kemer" class="project-img">
                 <h3 class="project-title">Kelime Kültür Kemer</h3>
                 <div class="project-tech">Unity • Mobile</div>
-                <p class="project-desc">An engaging mobile word game that tests vocabulary and cultural knowledge through interactive gameplay mechanics.</p>
+                <p class="project-desc">A crossword-style puzzle game where players test their vocabulary by finding the correct words to fill in the blank tiles.</p>
                 <a href="#" class="play-btn" target="_blank">View</a>
             </div>
 
@@ -342,6 +349,7 @@
             <p class="project-desc" style="margin-bottom:0;">2D Roguelike Card Game</p>
         </div>
 
+        <!-- İLETİŞİM BUTONU (GÜNCELLENDİ) -->
         <div id="contactBtn" class="btn" onclick="revealEmail()">Contact Me</div>
 
         <div class="social-links">
@@ -376,7 +384,8 @@
     <script>
         function revealEmail() {
             const btn = document.getElementById('contactBtn');
-            btn.textContent = 'mehmetali@gedik.games';
+            // Yeni HTML içeriği (mailto linki ile)
+            btn.innerHTML = '<a href="mailto:mehmetali@gedik.games">mehmetali@gedik.games</a>';
             btn.classList.add('expanded');
             btn.onclick = null;
         }
