@@ -48,10 +48,10 @@
             color: #fff;
         }
 
-        /* --- PROFIL FOTOĞRAFI ALANI (BÜYÜTÜLDÜ) --- */
+        /* --- PROFIL FOTOĞRAFI ALANI --- */
         .profile-container {
-            width: 240px; /* %50 Büyütüldü */
-            height: 240px; /* %50 Büyütüldü */
+            width: 240px; 
+            height: 240px; 
             margin: 0 auto 20px auto;
             border-radius: 50%;
             border: 4px solid #ff3e3e;
@@ -105,7 +105,7 @@
             margin: 0;
         }
         
-        /* --- YENİ İLETİŞİM BUTONU STİLİ (MAILTO EKLENDİ) --- */
+        /* --- YENİ İLETİŞİM BUTONU STİLİ --- */
         .btn {
             display: inline-block;
             margin-top: 40px;
@@ -292,7 +292,7 @@
         <!-- KİŞİSEL BİLGİLER / HAKKINDA -->
         <div class="bio-card">
             <p class="bio-text">
-                Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş İstiklal Üniversitesi and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life using Unity.
+                Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş Sütçü İmam University and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life using Unity.
             </p>
         </div>
 
@@ -333,7 +333,7 @@
             </div>
 
             <div class="project-card">
-                <img src="kelime-kultur-kemer.png" alt="Kelime Kültür Kemer" class="project-img">
+                <img src="1kelimekültürkemer1.webp" alt="Kelime Kültür Kemer" class="project-img">
                 <h3 class="project-title">Kelime Kültür Kemer</h3>
                 <div class="project-tech">Unity • Mobile</div>
                 <p class="project-desc">A crossword-style puzzle game where players test their vocabulary by finding the correct words to fill in the blank tiles.</p>
@@ -349,7 +349,7 @@
             <p class="project-desc" style="margin-bottom:0;">2D Roguelike Card Game</p>
         </div>
 
-        <!-- İLETİŞİM BUTONU (GÜNCELLENDİ) -->
+        <!-- İLETİŞİM BUTONU -->
         <div id="contactBtn" class="btn" onclick="revealEmail()">Contact Me</div>
 
         <div class="social-links">
@@ -384,7 +384,6 @@
     <script>
         function revealEmail() {
             const btn = document.getElementById('contactBtn');
-            // Yeni HTML içeriği (mailto linki ile)
             btn.innerHTML = '<a href="mailto:mehmetali@gedik.games">mehmetali@gedik.games</a>';
             btn.classList.add('expanded');
             btn.onclick = null;
