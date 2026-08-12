@@ -48,18 +48,61 @@
             color: #fff;
         }
 
+        /* --- PROFIL FOTOĞRAFI ALANI --- */
+        .profile-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            border: 3px solid #ff3e3e;
+            box-shadow: 0 0 20px rgba(255, 62, 62, 0.25);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .profile-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 62, 62, 0.5);
+        }
+        .profile-container:hover .profile-img {
+            transform: scale(1.08);
+        }
+
         h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: #ff3e3e;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        p {
+        .subtitle {
             font-size: 1.2rem;
             color: #a0a0a0;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* --- KİŞİSEL BİLGİLER / BIO KART --- */
+        .bio-card {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto 30px auto;
+            max-width: 650px;
+            text-align: center;
+        }
+        .bio-text {
+            font-size: 1rem;
+            color: #cccccc;
+            line-height: 1.6;
+            margin: 0;
         }
         
         /* --- YENİ İLETİŞİM BUTONU STİLİ --- */
@@ -73,38 +116,48 @@
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            white-space: nowrap; /* Metnin alt satıra kaymasını engeller */
+            white-space: nowrap; 
             overflow: hidden;
-            user-select: all; /* Kullanıcının maili kolayca kopyalamasını sağlar */
+            user-select: all; 
         }
         .btn:hover {
             transform: scale(1.05);
             background-color: #e62e2e;
         }
-        /* Buton tıklandıktan sonraki hali */
         .btn.expanded {
             background-color: #1f1f1f;
             border: 1px solid #ff3e3e;
             color: #ff3e3e;
-            padding: 12px 40px; /* Genişleme efekti için */
+            padding: 12px 40px; 
             cursor: text;
         }
 
-        /* --- OYUN KARTLARI STİLİ --- */
+        /* --- OYUN KARTLARI VE KATEGORİ STİLLERİ --- */
         .section-title {
             margin-top: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 2rem;
             color: #fff;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             display: inline-block;
         }
+        .category-title {
+            font-size: 1.3rem;
+            color: #ff3e3e;
+            text-align: left;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 3px solid #ff3e3e;
+            padding-left: 10px;
+        }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .project-card {
             background-color: #1a1a1a;
@@ -220,11 +273,26 @@
     </div>
 
     <div class="container">
+        
+        <!-- PROFIL FOTOĞRAFI ALANI -->
+        <div class="profile-container">
+            <img src="1cepete1.webp" alt="Mehmet Ali Gedik" class="profile-img">
+        </div>
+
         <h1>MEHMET ALİ GEDİK</h1>
-        <p>Game Designer</p>
+        <div class="subtitle">Game Designer & Developer</div>
+
+        <!-- KİŞİSEL BİLGİLER / HAKKINDA -->
+        <div class="bio-card">
+            <p class="bio-text">
+                Game Designer & Developer specializing in core mechanics, systems design, and interactive gameplay. Passionate about bringing engaging PC and mobile experiences to life using Unity & GameMaker.
+            </p>
+        </div>
 
         <h2 class="section-title">GAMES & PROJECTS</h2>
         
+        <!-- PC OYUNLARI -->
+        <div class="category-title">💻 PC Games</div>
         <div class="projects-grid">
             
             <div class="project-card">
@@ -236,23 +304,38 @@
             </div>
 
             <div class="project-card">
-                <img src="kelime-oyunu.png" alt="Kelime Oyunu" class="project-img">
+                <img src="kelime-oyunu.png" alt="Kelime Oyunu +" class="project-img">
                 <h3 class="project-title">Kelime Oyunu +</h3>
                 <div class="project-tech">Unity • PC</div>
                 <p class="project-desc">A modern puzzle experience with advanced mechanics, a vocabulary-challenging structure, and a clean interface.</p>
                 <a href="#" class="play-btn" target="_blank">View</a>
             </div>
 
+        </div>
+
+        <!-- MOBİL OYUNLAR -->
+        <div class="category-title">📱 Mobile Games</div>
+        <div class="projects-grid">
+
             <div class="project-card">
                 <img src="mind-cafe.png" alt="Mind Cafe" class="project-img">
                 <h3 class="project-title">Mind Café</h3>
-                <div class="project-tech">Unity • Mobil</div>
+                <div class="project-tech">Unity • Mobile</div>
                 <p class="project-desc">A mobile cafe management concept offering players a peaceful experience with its relaxing atmosphere and brain-teasing puzzles.</p>
                 <a href="https://trello.com/b/cbjnEdzm/mind-cafe" class="play-btn" target="_blank">View</a>
             </div>
 
+            <div class="project-card">
+                <img src="kelime-kultur-kemer.png" alt="Kelime Kültür Kemer" class="project-img">
+                <h3 class="project-title">Kelime Kültür Kemer</h3>
+                <div class="project-tech">Unity • Mobile</div>
+                <p class="project-desc">An engaging mobile word game that tests vocabulary and cultural knowledge through interactive gameplay mechanics.</p>
+                <a href="#" class="play-btn" target="_blank">View</a>
+            </div>
+
         </div>
 
+        <!-- CURRENTLY WORKING ON -->
         <div class="wip-card">
             <div class="wip-label">🚧 Currently Working On 🚧</div>
             <h3 class="wip-title">Do Something but Don't Die</h3>
@@ -294,8 +377,8 @@
         function revealEmail() {
             const btn = document.getElementById('contactBtn');
             btn.textContent = 'mehmetali@gedik.games';
-            btn.classList.add('expanded'); // CSS'teki yeni tasarımı uygular
-            btn.onclick = null; // Bir daha tıklanmasını engeller
+            btn.classList.add('expanded');
+            btn.onclick = null;
         }
     </script>
 
