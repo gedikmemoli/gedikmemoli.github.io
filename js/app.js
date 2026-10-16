@@ -4,9 +4,9 @@ const projectsData = [
         title: "Living Cells",
         engine: "GameMaker",
         platform: "PC",
-        isFeatured: true,
+        isFeatured: false,
         genre: { en: "Platformer Adventure", tr: "Platform Macera" },
-        role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı ve Geliştirici" },
+        role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı & Geliştirici" },
         thumbnail: "living-cells.png",
         externalLink: "https://gedikmemoli.itch.io/living-cells",
         media: [
@@ -21,12 +21,12 @@ const projectsData = [
             en: [
                 { title: "Core Loop", desc: "Navigate challenging platforms, defeat enemies, and collect souls.", icon: "🔄" },
                 { title: "Combat", desc: "Fast-paced melee attacks and dodge mechanics.", icon: "⚔️" },
-                { title: "Boss Fights", desc: "Intense multi-phase boss battle requiring pattern recognition.", icon: "👹" }
+                { title: "Boss Fights", desc: "Intense boss battle requiring pattern recognition.", icon: "👹" }
             ],
             tr: [
                 { title: "Temel Döngü", desc: "Zorlu platformları aş, düşmanları yen ve ruhları topla.", icon: "🔄" },
                 { title: "Savaş", desc: "Hızlı yakın dövüş saldırıları ve kaçınma mekanikleri.", icon: "⚔️" },
-                { title: "Patron Savaşları", desc: "Desen tanıma gerektiren yoğun çok aşamalı patron savaşı.", icon: "👹" }
+                { title: "Patron Savaşları", desc: "Desen tanıma gerektiren yoğun boss savaşı.", icon: "👹" }
             ]
         }
     },
@@ -35,26 +35,24 @@ const projectsData = [
         title: "Kelime Oyunu +",
         engine: "Unity",
         platform: "PC",
-        genre: { en: "Multiplayer Word Game", tr: "Çok Oyunculu Kelime Oyunu" },
-        role: { en: "Game Designer", tr: "Oyun Tasarımcısı" },
+        genre: { en: "Word Game Editor", tr: "Kelime Oyunu Editörü" },
+        role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı & Geliştirici" },
         thumbnail: "kelime-oyunu.png",
         externalLink: "#",
         media: [
             { type: "image", url: "kelime-oyunu.png" }
         ],
         overview: {
-            en: "A multiplayer word game experience featuring an admin panel. One person acts as the game master while the others play, offering an interactive group activity.",
-            tr: "Admin paneli içeren, çok oyunculu bir kelime oyunu deneyimi. Bir kişinin oyunu yönettiği, diğerlerinin ise oyuncu olduğu interaktif bir grup aktivitesi sunuyor."
+            en: "A word game experience featuring an admin panel. One person acts as the game master while the others play, offering an interactive group activity.",
+            tr: "Admin paneli içeren bir kelime oyunu deneyimi. Bir kişinin oyunu yönettiği, diğerlerinin ise oyuncu olduğu interaktif bir grup aktivitesi sunuyor."
         },
         mechanics: {
             en: [
                 { title: "Game Master Mode", desc: "Dedicated admin panel to control the flow and questions.", icon: "👑" },
-                { title: "Multiplayer", desc: "Real-time synchronization between the host and players.", icon: "👥" },
                 { title: "Scoring System", desc: "Dynamic score calculation based on speed and accuracy.", icon: "💯" }
             ],
             tr: [
                 { title: "Oyun Yöneticisi Modu", desc: "Akışı ve soruları kontrol etmek için özel admin paneli.", icon: "👑" },
-                { title: "Çok Oyunculu", desc: "Sunucu ve oyuncular arasında gerçek zamanlı senkronizasyon.", icon: "👥" },
                 { title: "Puanlama Sistemi", desc: "Hız ve doğruluğa dayalı dinamik puan hesaplama.", icon: "💯" }
             ]
         }
@@ -65,7 +63,7 @@ const projectsData = [
         engine: "Unity",
         platform: "Mobile",
         genre: { en: "Simulation / Management", tr: "Simülasyon / Yönetim" },
-        role: { en: "Game Designer", tr: "Oyun Tasarımcısı" },
+        role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı & Geliştirici" },
         thumbnail: "mind-cafe.png",
         externalLink: "https://play.google.com/store/apps/details?id=com.istiklal.doga.y2026.mindcafe",
         media: [
@@ -93,8 +91,8 @@ const projectsData = [
         title: "Kelime Kültür Kemer",
         engine: "Unity",
         platform: "Mobile",
-        genre: { en: "Puzzle / Crossword", tr: "Bulmaca / Çengel" },
-        role: { en: "Game Designer", tr: "Oyun Tasarımcısı" },
+        genre: { en: "Puzzle / Crossword", tr: "Çengel Bulmaca" },
+        role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı & Geliştirici" },
         thumbnail: "1kelimekültürkemer1.webp",
         externalLink: "#",
         media: [
@@ -114,6 +112,87 @@ const projectsData = [
                 { title: "Izgara Sistemi", desc: "Zorlukla ölçeklenen dinamik çengel bulmaca ızgarası.", icon: "🔠" },
                 { title: "İlerleme", desc: "Giderek karmaşıklaşan kelimeler ve daha büyük panolar.", icon: "📈" },
                 { title: "İpuçları", desc: "Sıkışıldığında harfleri ortaya çıkarmak için kaynak yönetimi.", icon: "💡" }
+            ]
+        }
+    },
+    {
+        id: "broken-dice", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
+        title: "Broken Dice", // Oyunun başlığı
+        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
+        platform: "PC", // Platform (örn: PC, Mobile, Web)
+        genre: {
+            en: "Roguelite Dungeon Crawler",
+            tr: "Roguelite Dungeon Crawler"
+        },
+        role: {
+            en: "UI & Game Designer",
+            tr: "UI & Oyun Tasarımcısı"
+        },
+        thumbnail: "brokendice1.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        externalLink: "#", // İndirme / Mağaza linki
+        media: [
+            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
+            { type: "image", url: "brokendice1.webp" },
+            { type: "video", url: "https://youtu.be/embed/8ptYMUUyPTo?si=Sp4SC7pzWZlT3dkE&t=144" }
+            // Video eklemek isterseniz örnek:
+            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
+        ],
+        overview: {
+            en: "A roguelite dungeon crawler experience. Throw your dice and clear the level.",
+            tr: "Roguelite dungeon crawler tecrübesi. Zarlarını fırlat ve seviyeyi temizle."
+        },
+        mechanics: {
+            en: [
+                { title: "Throwing Dice", desc: "There is no sword or any weapon, only dice!", icon: "🎲" },
+                { title: "Positioning", desc: "Dodge all the enemy attacks and survive.", icon: "♟️" }
+            ],
+            tr: [
+                { title: "Zar Fırlatma", desc: "Bir kılıcın veya herhangi bir silahın yok, sadce zarlar!", icon: "🎲" },
+                { title: "Pozisyon Alma", desc: "Düşman saldırılarının tümünden kaçın ve hayatta kal.", icon: "♟️" }
+            ]
+        }
+    },
+    {
+        id: "firuze", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
+        title: "Firuze", // Oyunun başlığı
+        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
+        platform: "PC", // Platform (örn: PC, Mobile, Web)
+        genre: {
+            en: "Simulation & Shop Management",
+            tr: "Simülasyon & Dükkan Yönetimi"
+        },
+        role: {
+            en: "UI & Game Designer",
+            tr: "UI & Oyun Tasarımcısı"
+        },
+        thumbnail: "0.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        externalLink: "https://gedikmemoli.itch.io/firuze", // İndirme / Mağaza linki
+        media: [
+            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
+            { type: "image", url: "1.webp" },
+            { type: "image", url: "2.webp" },
+            { type: "image", url: "3.webp" },
+            { type: "image", url: "4.webp" },
+            { type: "image", url: "5.webp" },
+            { type: "image", url: "6.webp" },
+            { type: "image", url: "7.webp" },
+            { type: "image", url: "8.webp" },
+            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" }
+            // Video eklemek isterseniz örnek:
+            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
+        ],
+        overview: {
+            en: "A Turkic clay pot shop management simulation.",
+            tr: "Türk çini dükkanı yönetimi simülasyonu."
+        },
+        mechanics: {
+            en: [
+                { title: "Painting", desc: "Paint with many shapes or just with brush.", icon: "🎨" },
+                { title: "Shop", desc: "Sell your own designes.", icon: "💵" }
+            ],
+            tr: [
+                { title: "Boyama", desc: "Çeşitli şekillerle ya da fırçanla boya.", icon: "🎨" },
+                { title: "Pozisyon Alma", desc: "Kendi tasarımlarını sat.", icon: "💵" }
             ]
         }
     },
@@ -168,7 +247,7 @@ const translations = {
     en: {
         pageTitle: "Mehmet Ali Gedik | Game Designer",
         subtitle: "Game Designer",
-        bioText: "Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş Sütçü İmam University and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life using Unity.",
+        bioText: "Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş Sütçü İmam University and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life.",
         gamesTitle: "GAMES & PROJECTS",
         filterAll: "All",
         filterPC: "PC",
@@ -187,13 +266,13 @@ const translations = {
         platformLabel: "Platform:",
         genreLabel: "Genre:",
         playGameBtn: "Play Game",
-        featuredBadge: "👑 Featured Project"
+        featuredBadge: "Featured Project"
     },
     tr: {
         pageTitle: "Mehmet Ali Gedik | Game Designer",
         subtitle: "Oyun Tasarımcısı",
-        bioText: "Temel mekanikler, sistem tasarımı ve etkileşimli oynanış üzerine uzmanlaşan Oyun Tasarımcısı. Şu anda Kahramanmaraş Sütçü İmam Üniversitesi'nde Dijital Oyun Tasarımı bölümünde eğitimime devam ediyorum ve Antalya, Kemer'de yaşıyorum. Unity kullanarak sürükleyici bilgisayar ve mobil deneyimlerini hayata geçirme konusunda tutkuluyum.",
-        gamesTitle: "OYUNLAR VE PROJELER",
+        bioText: "Temel mekanikler, sistem tasarımı ve etkileşimli oynanış üzerine uzmanlaşan Oyun Tasarımcısı. Şu anda Kahramanmaraş Sütçü İmam Üniversitesi'nde Dijital Oyun Tasarımı bölümünde eğitimime devam ediyorum ve Antalya, Kemer'de yaşıyorum. Sürükleyici bilgisayar ve mobil deneyimlerini hayata geçirme konusunda tutkuluyum.",
+        gamesTitle: "OYUNLAR & PROJELER",
         filterAll: "Tümü",
         filterPC: "PC",
         filterMobile: "Mobil",
@@ -211,7 +290,7 @@ const translations = {
         platformLabel: "Platform:",
         genreLabel: "Tür:",
         playGameBtn: "Oyunu Oyna",
-        featuredBadge: "👑 Öne Çıkan Oyun"
+        featuredBadge: "Öne Çıkan Oyun"
     }
 };
 
