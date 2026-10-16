@@ -115,7 +115,52 @@ const projectsData = [
                 { title: "İpuçları", desc: "Sıkışıldığında harfleri ortaya çıkarmak için kaynak yönetimi.", icon: "💡" }
             ]
         }
+    },
+    /*
+    =========================================
+    👉 YENİ OYUN EKLEME ŞABLONU (TEMPLATE) 👈
+    =========================================
+    Aşağıdaki yorum satırındaki bloğu kopyalayıp hemen üstte biten '}' virgülünden sonra yapıştırarak
+    kendi oyununuzu kolayca ekleyebilirsiniz. HTML koduna dokunmanıza gerek yoktur.
+
+    {
+        id: "yeni-oyun-benzersiz-id", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
+        title: "Oyunun Adı", // Oyunun başlığı
+        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
+        platform: "PC", // Platform (örn: PC, Mobile, Web)
+        genre: {
+            en: "Genre in English",
+            tr: "Türkçe Tür"
+        },
+        role: {
+            en: "Your Role (e.g., Game Designer)",
+            tr: "Rolünüz (örn., Oyun Tasarımcısı)"
+        },
+        thumbnail: "resim-adi.png", // Ana sayfada kartta görünecek resmin dosya yolu
+        externalLink: "https://store-link.com", // İndirme / Mağaza linki
+        media: [
+            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
+            { type: "image", url: "resim1.png" },
+            { type: "image", url: "resim2.png" }
+            // Video eklemek isterseniz örnek:
+            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
+        ],
+        overview: {
+            en: "Short description of the game in English.",
+            tr: "Oyunun Türkçe kısa açıklaması ve özeti."
+        },
+        mechanics: {
+            en: [
+                { title: "Mechanic 1", desc: "Description of mechanic 1.", icon: "⚔️" },
+                { title: "Feature 2", desc: "Description of feature 2.", icon: "🚀" }
+            ],
+            tr: [
+                { title: "Mekanik 1", desc: "Mekanik 1 in açıklaması.", icon: "⚔️" },
+                { title: "Özellik 2", desc: "Özellik 2 nin açıklaması.", icon: "🚀" }
+            ]
+        }
     }
+    */
 ];
 
 const translations = {
@@ -140,7 +185,7 @@ const translations = {
         engineLabel: "Engine:",
         platformLabel: "Platform:",
         genreLabel: "Genre:",
-        playGameBtn: "Play Game / View External"
+        playGameBtn: "Play Game"
     },
     tr: {
         pageTitle: "Mehmet Ali Gedik | Game Designer",
@@ -163,7 +208,7 @@ const translations = {
         engineLabel: "Motor:",
         platformLabel: "Platform:",
         genreLabel: "Tür:",
-        playGameBtn: "Oyunu Oyna / Mağazada Gör"
+        playGameBtn: "Oyunu Oyna"
     }
 };
 
