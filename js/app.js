@@ -4,6 +4,7 @@ const projectsData = [
         title: "Living Cells",
         engine: "GameMaker",
         platform: "PC",
+        isFeatured: true,
         genre: { en: "Platformer Adventure", tr: "Platform Macera" },
         role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı ve Geliştirici" },
         thumbnail: "living-cells.png",
@@ -185,7 +186,8 @@ const translations = {
         engineLabel: "Engine:",
         platformLabel: "Platform:",
         genreLabel: "Genre:",
-        playGameBtn: "Play Game"
+        playGameBtn: "Play Game",
+        featuredBadge: "👑 Featured Project"
     },
     tr: {
         pageTitle: "Mehmet Ali Gedik | Game Designer",
@@ -208,7 +210,8 @@ const translations = {
         engineLabel: "Motor:",
         platformLabel: "Platform:",
         genreLabel: "Tür:",
-        playGameBtn: "Oyunu Oyna"
+        playGameBtn: "Oyunu Oyna",
+        featuredBadge: "👑 Öne Çıkan Oyun"
     }
 };
 
@@ -295,10 +298,34 @@ function revealEmail() {
 }
 
 function renderProjects() {
+    const featuredContainer = document.getElementById('featured-project-container');
     const container = document.getElementById('projects-container');
+
+    featuredContainer.innerHTML = '';
     container.innerHTML = '';
 
+    // Render Featured Project
+    const featuredProject = projectsData.find(p => p.isFeatured);
+    if (featuredProject) {
+        featuredContainer.innerHTML = `
+            <div class="featured-card" style="background-image: url('${featuredProject.thumbnail}');">
+                <div class="featured-overlay">
+                    <div class="featured-badge">${translations[currentLang].featuredBadge}</div>
+                    <h2 class="featured-title">${featuredProject.title}</h2>
+                    <p class="featured-desc">${featuredProject.overview[currentLang]}</p>
+                    <div class="featured-tags">
+                        <span class="tag">${featuredProject.engine}</span>
+                        <span class="tag">${featuredProject.platform}</span>
+                    </div>
+                    <a href="#project-${featuredProject.id}" class="play-btn featured-btn">${translations[currentLang].viewBtn}</a>
+                </div>
+            </div>
+        `;
+    }
+
+    // Render remaining projects based on filter
     const filteredProjects = projectsData.filter(p => {
+        if (p.isFeatured) return false; // Exclude featured from main grid
         if (currentFilter === 'all') return true;
         return p.platform === currentFilter || p.engine === currentFilter;
     });
