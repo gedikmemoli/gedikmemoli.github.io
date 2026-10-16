@@ -1,9 +1,47 @@
 const projectsData = [
     {
+        id: "broken-dice", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
+        title: "Broken Dice", // Oyunun başlığı
+        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
+        platform: "PC", // Platform (örn: PC, Mobile, Web)
+        genre: {
+            en: "Roguelite Dungeon Crawler",
+            tr: "Roguelite Dungeon Crawler"
+        },
+        role: {
+            en: "UI & Game Designer",
+            tr: "UI & Oyun Tasarımcısı"
+        },
+        thumbnail: "brokendice1.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        externalLink: "#", // İndirme / Mağaza linki
+        media: [
+            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
+            { type: "image", url: "brokendice1.webp" },
+            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" }
+            // Video eklemek isterseniz örnek:
+            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
+        ],
+        overview: {
+            en: "A roguelite dungeon crawler experience. Throw your dice and clear the level.",
+            tr: "Roguelite dungeon crawler tecrübesi. Zarlarını fırlat ve seviyeyi temizle."
+        },
+        mechanics: {
+            en: [
+                { title: "Throwing Dice", desc: "There is no sword or any weapon, only dice!", icon: "🎲" },
+                { title: "Positioning", desc: "Dodge all the enemy attacks and survive.", icon: "♟️" }
+            ],
+            tr: [
+                { title: "Zar Fırlatma", desc: "Bir kılıcın veya herhangi bir silahın yok, sadce zarlar!", icon: "🎲" },
+                { title: "Pozisyon Alma", desc: "Düşman saldırılarının tümünden kaçın ve hayatta kal.", icon: "♟️" }
+            ]
+        }
+    },
+    {
         id: "firuze", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
         title: "Firuze", // Oyunun başlığı
         engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
         platform: "PC", // Platform (örn: PC, Mobile, Web)
+        isFeatured: true,
         genre: {
             en: "Simulation & Shop Management",
             tr: "Simülasyon & Dükkan Yönetimi"
@@ -155,44 +193,6 @@ const projectsData = [
                 { title: "Izgara Sistemi", desc: "Zorlukla ölçeklenen dinamik çengel bulmaca ızgarası.", icon: "🔠" },
                 { title: "İlerleme", desc: "Giderek karmaşıklaşan kelimeler ve daha büyük panolar.", icon: "📈" },
                 { title: "İpuçları", desc: "Sıkışıldığında harfleri ortaya çıkarmak için kaynak yönetimi.", icon: "💡" }
-            ]
-        }
-    },
-    {
-        id: "broken-dice", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
-        title: "Broken Dice", // Oyunun başlığı
-        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
-        platform: "PC", // Platform (örn: PC, Mobile, Web)
-        isFeatured: true,
-        genre: {
-            en: "Roguelite Dungeon Crawler",
-            tr: "Roguelite Dungeon Crawler"
-        },
-        role: {
-            en: "UI & Game Designer",
-            tr: "UI & Oyun Tasarımcısı"
-        },
-        thumbnail: "brokendice1.webp", // Ana sayfada kartta görünecek resmin dosya yolu
-        externalLink: "#", // İndirme / Mağaza linki
-        media: [
-            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
-            { type: "image", url: "brokendice1.webp" },
-            { type: "video", url: "https://youtu.be/embed/8ptYMUUyPTo?si=Sp4SC7pzWZlT3dkE&t=144" }
-            // Video eklemek isterseniz örnek:
-            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
-        ],
-        overview: {
-            en: "A roguelite dungeon crawler experience. Throw your dice and clear the level.",
-            tr: "Roguelite dungeon crawler tecrübesi. Zarlarını fırlat ve seviyeyi temizle."
-        },
-        mechanics: {
-            en: [
-                { title: "Throwing Dice", desc: "There is no sword or any weapon, only dice!", icon: "🎲" },
-                { title: "Positioning", desc: "Dodge all the enemy attacks and survive.", icon: "♟️" }
-            ],
-            tr: [
-                { title: "Zar Fırlatma", desc: "Bir kılıcın veya herhangi bir silahın yok, sadce zarlar!", icon: "🎲" },
-                { title: "Pozisyon Alma", desc: "Düşman saldırılarının tümünden kaçın ve hayatta kal.", icon: "♟️" }
             ]
         }
     },
