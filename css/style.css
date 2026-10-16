@@ -428,13 +428,14 @@ h1 {
 
 .detail-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 350px;
     gap: 40px;
 }
 
 .detail-left {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .pd-title {
@@ -470,6 +471,7 @@ h1 {
     max-width: 100%;
     height: auto;
     max-height: 100%;
+    min-width: 0;
     object-fit: contain;
     transition: transform 0.3s ease;
 }

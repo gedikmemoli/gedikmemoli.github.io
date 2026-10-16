@@ -509,7 +509,12 @@ function setMainStage(mediaItem) {
     if (mediaItem.type === 'image') {
         stage.innerHTML = `<img src="${mediaItem.url}" alt="Media" onclick="openLightbox('${mediaItem.url}')" style="cursor: zoom-in;">`;
     } else if (mediaItem.type === 'video') {
-        stage.innerHTML = `<iframe src="${mediaItem.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        let videoUrl = mediaItem.url;
+        // Fix incorrect YouTube URL format (embed/watch?v= -> embed/) without changing user data
+        if (videoUrl.includes('embed/watch?v=')) {
+            videoUrl = videoUrl.replace('embed/watch?v=', 'embed/');
+        }
+        stage.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
     }
 }
 
