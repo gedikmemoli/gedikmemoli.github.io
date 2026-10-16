@@ -55,14 +55,14 @@ const projectsData = [
         media: [
             // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
             { type: "image", url: "1.webp" },
+            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" },
             { type: "image", url: "2.webp" },
             { type: "image", url: "3.webp" },
             { type: "image", url: "4.webp" },
             { type: "image", url: "5.webp" },
             { type: "image", url: "6.webp" },
             { type: "image", url: "7.webp" },
-            { type: "image", url: "8.webp" },
-            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" }
+            { type: "image", url: "8.webp" }
             // Video eklemek isterseniz örnek:
             // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
         ],
