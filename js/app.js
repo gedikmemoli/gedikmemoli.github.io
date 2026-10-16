@@ -1,10 +1,53 @@
 const projectsData = [
     {
+        id: "firuze", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
+        title: "Firuze", // Oyunun başlığı
+        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
+        platform: "PC", // Platform (örn: PC, Mobile, Web)
+        genre: {
+            en: "Simulation & Shop Management",
+            tr: "Simülasyon & Dükkan Yönetimi"
+        },
+        role: {
+            en: "UI & Game Designer",
+            tr: "UI & Oyun Tasarımcısı"
+        },
+        thumbnail: "0.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        externalLink: "https://gedikmemoli.itch.io/firuze", // İndirme / Mağaza linki
+        media: [
+            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
+            { type: "image", url: "1.webp" },
+            { type: "image", url: "2.webp" },
+            { type: "image", url: "3.webp" },
+            { type: "image", url: "4.webp" },
+            { type: "image", url: "5.webp" },
+            { type: "image", url: "6.webp" },
+            { type: "image", url: "7.webp" },
+            { type: "image", url: "8.webp" },
+            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" }
+            // Video eklemek isterseniz örnek:
+            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
+        ],
+        overview: {
+            en: "A Turkic clay pot shop management simulation.",
+            tr: "Türk çini dükkanı yönetimi simülasyonu."
+        },
+        mechanics: {
+            en: [
+                { title: "Painting", desc: "Paint with many shapes or just with brush.", icon: "🎨" },
+                { title: "Shop", desc: "Sell your own designes.", icon: "💵" }
+            ],
+            tr: [
+                { title: "Boyama", desc: "Çeşitli şekillerle ya da fırçanla boya.", icon: "🎨" },
+                { title: "Pozisyon Alma", desc: "Kendi tasarımlarını sat.", icon: "💵" }
+            ]
+        }
+    },
+    {
         id: "living-cells",
         title: "Living Cells",
         engine: "GameMaker",
         platform: "PC",
-        isFeatured: false,
         genre: { en: "Platformer Adventure", tr: "Platform Macera" },
         role: { en: "Game Designer & Developer", tr: "Oyun Tasarımcısı & Geliştirici" },
         thumbnail: "living-cells.png",
@@ -120,6 +163,7 @@ const projectsData = [
         title: "Broken Dice", // Oyunun başlığı
         engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
         platform: "PC", // Platform (örn: PC, Mobile, Web)
+        isFeatured: true,
         genre: {
             en: "Roguelite Dungeon Crawler",
             tr: "Roguelite Dungeon Crawler"
@@ -149,50 +193,6 @@ const projectsData = [
             tr: [
                 { title: "Zar Fırlatma", desc: "Bir kılıcın veya herhangi bir silahın yok, sadce zarlar!", icon: "🎲" },
                 { title: "Pozisyon Alma", desc: "Düşman saldırılarının tümünden kaçın ve hayatta kal.", icon: "♟️" }
-            ]
-        }
-    },
-    {
-        id: "firuze", // URL'de görünecek id (boşluksuz, küçük harf, ingilizce karakter)
-        title: "Firuze", // Oyunun başlığı
-        engine: "Unity", // Kullanılan motor (örn: Unity, Unreal, GameMaker)
-        platform: "PC", // Platform (örn: PC, Mobile, Web)
-        genre: {
-            en: "Simulation & Shop Management",
-            tr: "Simülasyon & Dükkan Yönetimi"
-        },
-        role: {
-            en: "UI & Game Designer",
-            tr: "UI & Oyun Tasarımcısı"
-        },
-        thumbnail: "0.webp", // Ana sayfada kartta görünecek resmin dosya yolu
-        externalLink: "https://gedikmemoli.itch.io/firuze", // İndirme / Mağaza linki
-        media: [
-            // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
-            { type: "image", url: "1.webp" },
-            { type: "image", url: "2.webp" },
-            { type: "image", url: "3.webp" },
-            { type: "image", url: "4.webp" },
-            { type: "image", url: "5.webp" },
-            { type: "image", url: "6.webp" },
-            { type: "image", url: "7.webp" },
-            { type: "image", url: "8.webp" },
-            { type: "video", url: "https://www.youtube.com/embed/watch?v=8ptYMUUyPTo" }
-            // Video eklemek isterseniz örnek:
-            // { type: "video", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID" }
-        ],
-        overview: {
-            en: "A Turkic clay pot shop management simulation.",
-            tr: "Türk çini dükkanı yönetimi simülasyonu."
-        },
-        mechanics: {
-            en: [
-                { title: "Painting", desc: "Paint with many shapes or just with brush.", icon: "🎨" },
-                { title: "Shop", desc: "Sell your own designes.", icon: "💵" }
-            ],
-            tr: [
-                { title: "Boyama", desc: "Çeşitli şekillerle ya da fırçanla boya.", icon: "🎨" },
-                { title: "Pozisyon Alma", desc: "Kendi tasarımlarını sat.", icon: "💵" }
             ]
         }
     },
