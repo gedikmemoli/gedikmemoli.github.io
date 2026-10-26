@@ -40,12 +40,15 @@ body {
     }
 }
 
-/* --- TOP ACTIONS (CV Download) --- */
-.top-actions {
+/* --- TOP RIGHT ACTIONS (CV & Lang Switch) --- */
+.top-right-actions {
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
     z-index: 100;
+    align-items: center;
 }
 
 .cv-btn {
@@ -53,7 +56,7 @@ body {
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #ff3e3e;
-    padding: 8px 16px;
+    padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -76,9 +79,6 @@ body {
 
 /* --- LANGUAGE SWITCH --- */
 .lang-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: rgba(26, 26, 26, 0.6);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -86,7 +86,6 @@ body {
     padding: 5px 15px;
     font-size: 0.9rem;
     font-weight: 600;
-    z-index: 100;
 }
 
 .lang-switch a {
@@ -789,16 +788,12 @@ h1 {
     body {
         padding: 20px 0;
     }
-    .top-actions, .lang-switch {
+    .top-right-actions {
         position: relative;
         top: 0;
-        left: 0;
         right: 0;
         margin-bottom: 20px;
-        display: inline-block;
-    }
-    .top-actions {
-        margin-right: 10px;
+        justify-content: center;
     }
     h1 {
         font-size: 2rem;
