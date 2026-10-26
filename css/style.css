@@ -40,6 +40,40 @@ body {
     }
 }
 
+/* --- TOP ACTIONS (CV Download) --- */
+.top-actions {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.cv-btn {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ff3e3e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 62, 62, 0.1);
+    margin-top: 0;
+}
+
+.cv-btn:hover {
+    background-color: #ff3e3e;
+    color: white;
+    border-color: #ff3e3e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 62, 62, 0.4);
+}
+
 /* --- LANGUAGE SWITCH --- */
 .lang-switch {
     position: absolute;
@@ -755,12 +789,16 @@ h1 {
     body {
         padding: 20px 0;
     }
-    .lang-switch {
+    .top-actions, .lang-switch {
         position: relative;
         top: 0;
+        left: 0;
         right: 0;
         margin-bottom: 20px;
         display: inline-block;
+    }
+    .top-actions {
+        margin-right: 10px;
     }
     h1 {
         font-size: 2rem;
