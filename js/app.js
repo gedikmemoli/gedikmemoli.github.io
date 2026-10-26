@@ -266,7 +266,8 @@ const translations = {
         platformLabel: "Platform:",
         genreLabel: "Genre:",
         playGameBtn: "Play Game",
-        featuredBadge: "Featured Project"
+        featuredBadge: "Featured Project",
+        downloadCV: "Download CV"
     },
     tr: {
         pageTitle: "Mehmet Ali Gedik | Game Designer",
@@ -290,7 +291,8 @@ const translations = {
         platformLabel: "Platform:",
         genreLabel: "Tür:",
         playGameBtn: "Oyunu Oyna",
-        featuredBadge: "Öne Çıkan Oyun"
+        featuredBadge: "Öne Çıkan Oyun",
+        downloadCV: "CV İndir"
     }
 };
 
