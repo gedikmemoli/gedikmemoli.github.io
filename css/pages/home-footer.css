@@ -1,0 +1,74 @@
+/* =========================================================
+   HOME / FOOTER — WIP kartı, sosyal medya linkleri ve footer
+   ========================================================= */
+
+/* --- WIP CARD --- */
+.wip-card {
+    background: linear-gradient(145deg, #1a1a1a, #151515);
+    border: 1px dashed #ff3e3e;
+    border-radius: 12px;
+    padding: 35px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.wip-label {
+    color: #ff3e3e;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.wip-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #a0a0a0;
+    transition: all 0.3s ease;
+}
+
+.social-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.social-btn:hover {
+    background-color: #ff3e3e;
+    color: white;
+    border-color: #ff3e3e;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 62, 62, 0.4);
+}
+
+.footer {
+    margin-top: 70px;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+

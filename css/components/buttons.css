@@ -1,0 +1,47 @@
+/* =========================================================
+   BUTTONS — Genel .btn butonu ve iletişim (e-posta) butonu
+   ========================================================= */
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 12px 32px;
+    background-color: #ff3e3e;
+    color: white;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 62, 62, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #e62e2e;
+    box-shadow: 0 6px 20px rgba(255, 62, 62, 0.4);
+}
+
+.btn.expanded {
+    background-color: #1f1f1f;
+    border: 1px solid #ff3e3e;
+    padding: 0;
+    box-shadow: none;
+}
+
+.btn.expanded a {
+    display: block;
+    padding: 12px 40px;
+    color: #ff3e3e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.expanded a:hover {
+    color: #fff;
+}
+
