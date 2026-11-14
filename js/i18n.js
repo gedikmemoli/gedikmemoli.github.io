@@ -7,8 +7,9 @@ let currentLang = localStorage.getItem("lang") || "en";
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
 
-    if(lang === "tr") {
+    if (lang === "tr") {
         document.getElementById("lang-tr").classList.add("active");
         document.getElementById("lang-en").classList.remove("active");
     } else {
@@ -20,14 +21,14 @@ function setLanguage(lang) {
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if(translations[lang][key]) {
+        if (translations[lang][key]) {
             el.innerHTML = translations[lang][key];
         }
     });
 
     // Re-render UI components to reflect language
     renderProjects();
-    if(window.location.hash.startsWith('#project-')) {
+    if (window.location.hash.startsWith('#project-')) {
         renderProjectDetail(window.location.hash.replace('#project-', ''));
     }
 }

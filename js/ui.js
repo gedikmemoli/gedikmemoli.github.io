@@ -4,7 +4,8 @@
 
 function revealEmail() {
     const btn = document.getElementById('contactBtn');
-    btn.innerHTML = '<a href="mailto:mehmetali@gedik.games">mehmetali@gedik.games</a>';
+    const email = 'gedikmemoli@gmail.com';
+    btn.innerHTML = `<a href="mailto:${email}">${email}</a>`;
     btn.classList.add('expanded');
     btn.onclick = null;
     btn.removeAttribute("data-i18n");

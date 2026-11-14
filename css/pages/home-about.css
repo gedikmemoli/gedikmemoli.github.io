@@ -1,0 +1,112 @@
+/* =========================================================
+   HOME / ABOUT — Detaylı Hakkımda bölümü
+   ========================================================= */
+
+.about-section {
+    margin-top: 72px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    text-align: left;
+    align-items: stretch;
+}
+
+.about-card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-card-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-paragraph {
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.72;
+    color: var(--text-secondary);
+}
+
+.about-skills-group {
+    margin-top: 4px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.about-subheading {
+    margin: 0 0 12px 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.about-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.about-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-item {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.about-item-meta {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ff6b6b;
+    margin-bottom: 4px;
+}
+
+.about-item-title {
+    display: block;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.about-item-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+}

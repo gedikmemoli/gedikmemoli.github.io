@@ -3,109 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mehmet Ali Gedik — Game Designer portfolio showcasing Unity &amp; GameMaker projects, systems design, and playable prototypes.">
     <title>Mehmet Ali Gedik | Game Designer</title>
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 
     <!-- STYLES: Sıralama önemlidir (CSS cascade). Yeni dosya eklerseniz responsive.css en sonda kalmalı. -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components/top-actions.css">
-    <link rel="stylesheet" href="css/pages/home-profile.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/pages/home-profile.css">
     <link rel="stylesheet" href="css/pages/home-projects.css">
+    <link rel="stylesheet" href="css/pages/home-about.css">
     <link rel="stylesheet" href="css/pages/project-detail.css">
     <link rel="stylesheet" href="css/components/lightbox.css">
     <link rel="stylesheet" href="css/pages/home-footer.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="top-right-actions">
-        <a href="assets/docs/mehmet-ali-gedik-cv.pdf" target="_blank" download="Mehmet Ali Gedik – CV (Game Designer).pdf" class="btn cv-btn" data-i18n="downloadCV">Download CV</a>
-        <div class="lang-switch">
-            <a href="#" id="lang-tr">TR</a> | <a href="#" id="lang-en" class="active">EN</a>
+    <!-- ÜST BAR (Navigasyon, CV & Dil Seçici) -->
+    <header class="site-header">
+        <div class="navbar-inner">
+            <a href="#top" class="nav-brand">GEDİK<span class="nav-brand-accent">.GAMES</span></a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="#games" class="nav-link" data-nav="games" data-i18n="navGames">Games</a>
+                <a href="#about" class="nav-link" data-nav="about" data-i18n="navAbout">About</a>
+                <a href="#contact" class="nav-link" data-nav="contact" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="assets/docs/mehmet-ali-gedik-cv.pdf" target="_blank" download="Mehmet Ali Gedik – CV (Game Designer).pdf" class="nav-cv-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span data-i18n="downloadCV">Download CV</span>
+                </a>
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <a href="#" id="lang-tr">TR</a>
+                    <a href="#" id="lang-en" class="active">EN</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
 
     <!-- HOME VIEW -->
-    <div id="home-view" class="view-section active">
+    <main id="home-view" class="view-section active">
         <div class="container">
 
-            <!-- PROFIL FOTOĞRAFI ALANI -->
-            <div class="profile-container">
-                <img src="assets/images/profile/profile.webp" alt="Mehmet Ali Gedik" class="profile-img">
-            </div>
+            <!-- HERO / KISA TANITIM -->
+            <section id="top" class="hero-section">
+                <div class="profile-container">
+                    <img src="assets/images/profile/profile.webp" alt="Mehmet Ali Gedik" class="profile-img">
+                </div>
 
-            <h1>MEHMET ALİ GEDİK</h1>
-            <div class="subtitle" data-i18n="subtitle">Game Designer</div>
+                <h1>MEHMET ALİ GEDİK</h1>
+                <div class="subtitle" data-i18n="subtitle">Game Designer · Systems &amp; Gameplay</div>
 
-            <!-- KİŞİSEL BİLGİLER / HAKKINDA -->
-            <div class="bio-card">
-                <p class="bio-text" data-i18n="bioText">
-                    Game Designer specializing in core mechanics, systems design, and interactive gameplay. Currently studying Digital Game Design at Kahramanmaraş Sütçü İmam University and based in Kemer, Antalya. Passionate about bringing engaging PC and mobile experiences to life.
-                </p>
-            </div>
+                <div class="hero-bio">
+                    <p class="hero-bio-text" data-i18n="heroBio">
+                        Digital Game Design student crafting mechanics-driven PC and mobile games in Unity and GameMaker — from dice-based roguelites to cozy management sims.
+                    </p>
+                </div>
+            </section>
 
-        <!-- FEATURED PROJECT SHOWCASE -->
-        <div id="featured-project-container">
-            <!-- Injected via JS -->
-        </div>
+            <!-- OYUNLAR & PROJELER -->
+            <section id="games" class="games-section page-section">
+                <div class="section-heading">
+                    <h2 class="section-title" data-i18n="gamesTitle">GAMES &amp; PROJECTS</h2>
+                    <p class="section-subtitle" data-i18n="gamesSubtitle">
+                        Interactive prototypes, game jam entries, and published PC &amp; mobile titles.
+                    </p>
+                </div>
 
-            <h2 class="section-title" data-i18n="gamesTitle">GAMES & PROJECTS</h2>
+                <!-- FEATURED PROJECT SHOWCASE (Oyunlar kısmının en başında) -->
+                <div id="featured-project-container">
+                    <!-- Injected via JS -->
+                </div>
 
-            <!-- FILTER BAR -->
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
-                <button class="filter-btn" data-filter="PC" data-i18n="filterPC">PC</button>
-                <button class="filter-btn" data-filter="Mobile" data-i18n="filterMobile">Mobile</button>
-                <button class="filter-btn" data-filter="Unity" data-i18n="filterUnity">Unity</button>
-            </div>
+                <!-- FILTER BAR -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+                    <button class="filter-btn" data-filter="PC" data-i18n="filterPC">PC</button>
+                    <button class="filter-btn" data-filter="Mobile" data-i18n="filterMobile">Mobile</button>
+                    <button class="filter-btn" data-filter="Unity" data-i18n="filterUnity">Unity</button>
+                </div>
 
-            <!-- DYNAMIC PROJECTS GRID -->
-            <div id="projects-container" class="projects-grid">
-                <!-- Project cards will be injected here via JS -->
-            </div>
+                <!-- DYNAMIC PROJECTS GRID (Featured Project de kartlar arasında yer alır) -->
+                <div id="projects-container" class="projects-grid">
+                    <!-- Project cards will be injected here via JS -->
+                </div>
 
-            <!-- CURRENTLY WORKING ON -->
-            <div class="wip-card">
-                <div class="wip-label" data-i18n="wipLabel">🚧 Currently Working On 🚧</div>
-                <h3 class="wip-title">Do Something but Don't Die</h3>
-                <p class="project-desc" style="margin-bottom:0;" data-i18n="wipDesc">2D Roguelike Card Game</p>
-            </div>
+                <!-- CURRENTLY WORKING ON -->
+                <div class="wip-card">
+                    <div class="wip-label" data-i18n="wipLabel">🚧 Currently Working On 🚧</div>
+                    <h3 class="wip-title">Do Something but Don't Die</h3>
+                    <p class="wip-desc" data-i18n="wipDesc">2D Roguelike Card Game</p>
+                </div>
+            </section>
 
-            <!-- İLETİŞİM BUTONU -->
-            <div id="contactBtn" class="btn" onclick="revealEmail()" data-i18n="contactBtn">Contact Me</div>
+            <!-- DETAYLI HAKKIMDA -->
+            <section id="about" class="about-section page-section">
+                <div class="section-heading">
+                    <h2 class="section-title" data-i18n="aboutTitle">ABOUT ME</h2>
+                    <p class="section-subtitle" data-i18n="aboutSubtitle">
+                        Background, design focus, and hands-on game development experience.
+                    </p>
+                </div>
 
-            <div class="social-links">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3 class="about-card-title" data-i18n="aboutStoryTitle">Design Approach &amp; Journey</h3>
+                        <p class="about-paragraph" data-i18n="aboutP1">
+                            I am a Digital Game Design undergraduate at Kahramanmaraş Sütçü İmam University (2024–2028) based in Kemer, Antalya. My work centers on core gameplay loops, systems design, game economy balancing, and responsive player feedback.
+                        </p>
+                        <p class="about-paragraph" data-i18n="aboutP2">
+                            Across Unity, C#, and GameMaker, I have designed and prototyped six games spanning roguelite dungeon crawlers, shop management sims, platformers, and word puzzles. During my IT internship at Kemer Municipality, I designed and built Kelime Kültür Kemer to promote local culture and tourism through mobile gameplay.
+                        </p>
 
-                <a href="https://www.linkedin.com/in/mehmet-ali-gedik-4412b135b/" target="_blank" class="social-btn" title="LinkedIn">
-                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
+                        <div class="about-skills-group">
+                            <h4 class="about-subheading" data-i18n="aboutSkillsLabel">Core Focus &amp; Tools</h4>
+                            <div class="about-pill-list">
+                                <span class="about-pill">Systems Design</span>
+                                <span class="about-pill">Core Mechanics</span>
+                                <span class="about-pill">Economy &amp; Balancing</span>
+                                <span class="about-pill">Level Design</span>
+                                <span class="about-pill">Unity &amp; C#</span>
+                                <span class="about-pill">GameMaker</span>
+                                <span class="about-pill">Agile / Trello</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <a href="https://gedikmemoli.itch.io" target="_blank" class="social-btn" title="Itch.io">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Itch.io</title><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
-                </a>
+                    <div class="about-card">
+                        <h3 class="about-card-title" data-i18n="aboutMilestonesTitle">Education &amp; Experience</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <span class="about-item-meta" data-i18n="expEduMeta">2024 – 2028 (Expected)</span>
+                                <strong class="about-item-title" data-i18n="expEduTitle">Kahramanmaraş Sütçü İmam University</strong>
+                                <p class="about-item-desc" data-i18n="expEduDesc">B.A. in Digital Game Design — Systems, Mechanics &amp; Level Design.</p>
+                            </div>
 
-                <a href="https://www.instagram.com/gedikmemoli" target="_blank" class="social-btn" title="Instagram">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
+                            <div class="about-item">
+                                <span class="about-item-meta" data-i18n="expInternMeta">July 2026 · Kemer, Antalya</span>
+                                <strong class="about-item-title" data-i18n="expInternTitle">IT Intern — Kemer Municipality</strong>
+                                <p class="about-item-desc" data-i18n="expInternDesc">Designed and developed Kelime Kültür Kemer, a mobile crossword puzzle showcasing local heritage.</p>
+                            </div>
 
-                <a href="https://x.com/gedikmemoli" target="_blank" class="social-btn" title="X (Twitter)">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
+                            <div class="about-item">
+                                <span class="about-item-meta" data-i18n="expJamMeta">Game Jams &amp; Certifications</span>
+                                <strong class="about-item-title" data-i18n="expJamTitle">Rapid Prototyping &amp; Teamwork</strong>
+                                <p class="about-item-desc" data-i18n="expJamDesc">Game Jam Trabzon 2026, Akdeniz Game Jam, KİÜ Game Jam Team, and edX Generative AI for Games Development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <a href="https://www.youtube.com/@gedikmemoli" target="_blank" class="social-btn" title="YouTube">
-                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
+            <!-- İLETİŞİM -->
+            <section id="contact" class="contact-section page-section">
+                <div class="section-heading">
+                    <h2 class="section-title" data-i18n="contactTitle">CONTACT</h2>
+                </div>
 
-            </div>
+                <div class="contact-card">
+                    <p class="contact-lead" data-i18n="contactLead">
+                        Open to game design internships, freelance collaborations, and game jam teams.
+                    </p>
 
-            <div class="footer" data-i18n="footerText">
+                    <div id="contactBtn" class="btn" onclick="revealEmail()" data-i18n="contactBtn">Contact Me</div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mehmet-ali-gedik-4412b135b/" target="_blank" class="social-btn" title="LinkedIn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+
+                        <a href="https://gedikmemoli.itch.io" target="_blank" class="social-btn" title="Itch.io" aria-label="Itch.io">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Itch.io</title><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
+                        </a>
+
+                        <a href="https://www.instagram.com/gedikmemoli" target="_blank" class="social-btn" title="Instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+
+                        <a href="https://x.com/gedikmemoli" target="_blank" class="social-btn" title="X (Twitter)" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+
+                        <a href="https://www.youtube.com/@gedikmemoli" target="_blank" class="social-btn" title="YouTube" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer" data-i18n="footerText">
                 &copy; 2026 Gedik Games. All rights reserved.
-            </div>
+            </footer>
         </div>
-    </div>
+    </main>
 
     <!-- PROJECT DETAIL VIEW -->
     <div id="project-view" class="view-section">
@@ -169,7 +269,7 @@
     <!-- LIGHTBOX MODAL -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded media preview">
     </div>
 
     <!-- SCRIPTS: Sıralama önemlidir. Önce veriler, en son main.js -->

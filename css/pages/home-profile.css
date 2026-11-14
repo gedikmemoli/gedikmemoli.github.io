@@ -1,70 +1,76 @@
 /* =========================================================
-   HOME / PROFILE — Profil fotoğrafı, isim, alt başlık ve bio kartı
+   HOME / PROFILE — Üst Hero: Profil fotoğrafı, isim ve kısa tanıtım
    ========================================================= */
+
+.hero-section {
+    padding-top: 28px;
+    padding-bottom: 16px;
+}
 
 /* --- PROFILE PICTURE --- */
 .profile-container {
-    width: 350px;
-    height: 350px;
+    width: 210px;
+    height: 210px;
     margin: 0 auto 20px auto;
     border-radius: 50%;
-    border: 3px solid #ff3e3e;
-    box-shadow: 0 0 25px rgba(255, 62, 62, 0.3);
+    border: 2px solid rgba(255, 62, 62, 0.78);
+    background: radial-gradient(circle at 50% 35%, #2a2d38 0%, #14161c 100%);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    object-position: center top;
+    display: block;
+    transition: transform 0.35s ease;
 }
 
 .profile-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 62, 62, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 38px rgba(255, 62, 62, 0.2);
 }
 
 .profile-container:hover .profile-img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 h1 {
-    font-size: 2.8rem;
-    margin-bottom: 5px;
-    color: #ff3e3e;
+    font-size: 2.6rem;
+    margin: 8px 0 6px 0;
+    color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 10px;
+    letter-spacing: 0.06em;
     font-weight: 800;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #a0a0a0;
-    margin-bottom: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* --- BIO CARD --- */
-.bio-card {
-    background: rgba(26, 26, 26, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 0 auto 40px auto;
-    max-width: 650px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.bio-text {
     font-size: 1.05rem;
-    color: #cccccc;
-    line-height: 1.7;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+/* --- SHORT HERO BIO --- */
+.hero-bio {
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 18px 26px;
+    margin: 0 auto;
+    max-width: 640px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.hero-bio-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.68;
     margin: 0;
 }
-

@@ -11,44 +11,59 @@ function renderProjects() {
     featuredContainer.innerHTML = '';
     container.innerHTML = '';
 
-    // Render Featured Project
+    // Öne Çıkan Proje (Oyunlar bölümünün en başında ayrı vitrin olarak yer alır)
     const featuredProject = projectsData.find(p => p.isFeatured);
     if (featuredProject) {
+        const showcaseImg = featuredProject.featuredImage || featuredProject.thumbnail;
         featuredContainer.innerHTML = `
-            <div class="featured-card" style="background-image: url('${featuredProject.thumbnail}');">
-                <div class="featured-overlay">
+            <div class="featured-card">
+                <div class="featured-content">
                     <div class="featured-badge">${translations[currentLang].featuredBadge}</div>
-                    <h2 class="featured-title">${featuredProject.title}</h2>
+                    <h3 class="featured-title">${featuredProject.title}</h3>
                     <p class="featured-desc">${featuredProject.overview[currentLang]}</p>
                     <div class="featured-tags">
                         <span class="tag">${featuredProject.engine}</span>
                         <span class="tag">${featuredProject.platform}</span>
                     </div>
-                    <a href="#project-${featuredProject.id}" class="play-btn featured-btn">${translations[currentLang].viewBtn}</a>
+                    <a href="#project-${featuredProject.id}" class="featured-btn">${translations[currentLang].viewBtn} &rarr;</a>
                 </div>
+                <a href="#project-${featuredProject.id}" class="featured-media" aria-label="${featuredProject.title}">
+                    <img src="${showcaseImg}" alt="${featuredProject.title}" class="featured-img">
+                </a>
             </div>
         `;
     }
 
-    // Render remaining projects based on filter
+    // Tüm oyunlar (Öne Çıkan proje de kartlar arasında yer alır)
     const filteredProjects = projectsData.filter(p => {
-        if (p.isFeatured) return false; // Exclude featured from main grid
         if (currentFilter === 'all') return true;
         return p.platform === currentFilter || p.engine === currentFilter;
     });
 
     filteredProjects.forEach(p => {
-        const card = document.createElement('div');
+        const card = document.createElement('a');
+        card.href = `#project-${p.id}`;
         card.className = 'project-card';
+
+        const imgPosStyle = p.thumbnailPosition ? ` style="object-position: ${p.thumbnailPosition};"` : '';
+        const featuredPill = p.isFeatured
+            ? `<span class="card-featured-pill">${translations[currentLang].featuredPill}</span>`
+            : '';
+
         card.innerHTML = `
-            <img src="${p.thumbnail}" alt="${p.title}" class="project-img">
-            <h3 class="project-title">${p.title}</h3>
-            <div class="project-tags">
-                <span class="tag">${p.engine}</span>
-                <span class="tag">${p.platform}</span>
+            <div class="project-thumb-wrap">
+                <img src="${p.thumbnail}" alt="${p.title}" class="project-img"${imgPosStyle}>
+                ${featuredPill}
             </div>
-            <p class="project-desc">${p.overview[currentLang]}</p>
-            <a href="#project-${p.id}" class="play-btn">${translations[currentLang].viewBtn}</a>
+            <div class="project-body">
+                <h3 class="project-title">${p.title}</h3>
+                <div class="project-tags">
+                    <span class="tag">${p.engine}</span>
+                    <span class="tag">${p.platform}</span>
+                </div>
+                <p class="project-desc">${p.overview[currentLang]}</p>
+                <span class="project-card-action">${translations[currentLang].viewBtn} &rarr;</span>
+            </div>
         `;
         container.appendChild(card);
     });
@@ -70,25 +85,23 @@ function renderProjectDetail(projectId) {
 
     const extLink = document.getElementById('pd-external-link');
     extLink.href = project.externalLink;
-    if(project.externalLink === "#") {
+    if (project.externalLink === "#") {
         extLink.style.display = 'none';
     } else {
         extLink.style.display = 'inline-flex';
     }
 
     // Media Gallery
-    const stage = document.getElementById('main-stage');
     const strip = document.getElementById('thumbnail-strip');
     strip.innerHTML = '';
 
     if (project.media.length > 0) {
         setMainStage(project.media[0]);
 
-        project.media.forEach((m, idx) => {
+        project.media.forEach((m) => {
             const thumb = document.createElement('div');
             thumb.className = 'thumbnail';
             if (m.type === 'video') {
-                // If it's a youtube embed, try to extract ID for a thumbnail, else just put a placeholder play icon
                 thumb.innerHTML = `<div class="video-thumb-icon">▶</div>`;
                 thumb.style.backgroundColor = '#333';
             } else {
@@ -120,7 +133,6 @@ function setMainStage(mediaItem) {
         stage.innerHTML = `<img src="${mediaItem.url}" alt="Media" onclick="openLightbox('${mediaItem.url}')" style="cursor: zoom-in;">`;
     } else if (mediaItem.type === 'video') {
         let videoUrl = mediaItem.url;
-        // Fix incorrect YouTube URL format (embed/watch?v= -> embed/) without changing user data
         if (videoUrl.includes('embed/watch?v=')) {
             videoUrl = videoUrl.replace('embed/watch?v=', 'embed/');
         }

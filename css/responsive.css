@@ -1,76 +1,165 @@
 /* =========================================================
-   RESPONSIVE — Mobil (<=768px) düzenlemeleri. Her zaman EN SON yüklenmeli.
+   RESPONSIVE — Tablet (<=960px) ve Mobil (<=768px / <=420px) düzenlemeleri.
+   Her zaman EN SON yüklenmeli.
    ========================================================= */
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 0;
-    }
-    .top-right-actions {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-    h1 {
-        font-size: 2rem;
-        padding: 0 10px;
-    }
-    .subtitle {
-        font-size: 1rem;
-    }
+@media (max-width: 960px) {
     .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-card {
         grid-template-columns: 1fr;
     }
-    .project-card {
-        padding: 20px;
-    }
-    .bio-card {
-        padding: 20px;
-        margin-bottom: 30px;
-    }
-    .wip-card {
-        padding: 20px;
-    }
-    .wip-title {
-        font-size: 1.4rem;
-    }
-    .btn.expanded a {
-        padding: 12px 20px;
+
+    .featured-media {
+        order: -1;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+        border-left: none;
+        border-bottom: 1px solid var(--border-subtle);
     }
 
-    /* Featured Project Mobile Adjustments */
-    .featured-overlay {
-        background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8) 0%, rgba(18, 18, 18, 0.95) 100%);
-        padding: 40px 20px;
-        align-items: center;
-        text-align: center;
-    }
-    .featured-desc {
-        max-width: 100%;
-        font-size: 1rem;
-    }
-    .featured-title {
-        font-size: 2.2rem;
-    }
-    .featured-tags {
-        justify-content: center;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* Detail View adjustments */
     .detail-layout {
         grid-template-columns: 1fr;
     }
+
     .info-card {
         position: relative;
         top: 0;
     }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --navbar-height: 106px;
+    }
+
+    body {
+        padding-bottom: 32px;
+    }
+
+    .container {
+        padding: 18px 16px 32px 16px;
+    }
+
+    .navbar-inner {
+        flex-wrap: wrap;
+        padding: 10px 16px;
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .nav-brand {
+        order: 1;
+    }
+
+    .nav-actions {
+        order: 2;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 8px;
+        border-top: 1px solid var(--border-subtle);
+        gap: 4px;
+    }
+
+    .hero-section {
+        padding-top: 16px;
+    }
+
+    .profile-container {
+        width: 170px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 1.95rem;
+    }
+
+    .subtitle {
+        font-size: 0.96rem;
+    }
+
+    .hero-bio {
+        padding: 16px 18px;
+    }
+
+    .section-title {
+        font-size: 1.55rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-content {
+        padding: 24px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .featured-title {
+        font-size: 1.9rem;
+    }
+
+    .featured-tags {
+        justify-content: center;
+    }
+
+    .about-card {
+        padding: 22px 20px;
+    }
+
+    .wip-card {
+        padding: 22px 18px;
+    }
+
+    .wip-title {
+        font-size: 1.35rem;
+    }
+
+    .contact-card {
+        padding: 28px 18px;
+    }
+
+    .btn.expanded a {
+        padding: 12px 20px;
+    }
+
     .pd-title {
         font-size: 2rem;
     }
+
     .main-stage {
         border-radius: 6px;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-brand {
+        font-size: 0.85rem;
+    }
+
+    .nav-cv-btn {
+        padding: 0 11px;
+        font-size: 0.8rem;
+    }
+
+    .lang-switch a {
+        padding: 0 8px;
+        font-size: 0.76rem;
+    }
+
+    .nav-link {
+        padding: 0 10px;
+        font-size: 0.84rem;
     }
 }
