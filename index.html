@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehmet Ali Gedik | Game Designer</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
+    <!-- STYLES: Sıralama önemlidir (CSS cascade). Yeni dosya eklerseniz responsive.css en sonda kalmalı. -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/top-actions.css">
+    <link rel="stylesheet" href="css/pages/home-profile.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/pages/home-projects.css">
+    <link rel="stylesheet" href="css/pages/project-detail.css">
+    <link rel="stylesheet" href="css/components/lightbox.css">
+    <link rel="stylesheet" href="css/pages/home-footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="top-right-actions">
-        <a href="Mehmet Ali Gedik – CV (Game Designer) web.pdf" target="_blank" download class="btn cv-btn" data-i18n="downloadCV">Download CV</a>
+        <a href="assets/docs/mehmet-ali-gedik-cv.pdf" target="_blank" download="Mehmet Ali Gedik – CV (Game Designer).pdf" class="btn cv-btn" data-i18n="downloadCV">Download CV</a>
         <div class="lang-switch">
             <a href="#" id="lang-tr">TR</a> | <a href="#" id="lang-en" class="active">EN</a>
         </div>
@@ -23,7 +34,7 @@
 
             <!-- PROFIL FOTOĞRAFI ALANI -->
             <div class="profile-container">
-                <img src="1cepete1.webp" alt="Mehmet Ali Gedik" class="profile-img">
+                <img src="assets/images/profile/profile.webp" alt="Mehmet Ali Gedik" class="profile-img">
             </div>
 
             <h1>MEHMET ALİ GEDİK</h1>
@@ -161,6 +172,13 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <script src="js/app.js"></script>
+    <!-- SCRIPTS: Sıralama önemlidir. Önce veriler, en son main.js -->
+    <script src="js/data/projects.js"></script>
+    <script src="js/data/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

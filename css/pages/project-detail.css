@@ -1,0 +1,241 @@
+/* =========================================================
+   PROJECT DETAIL — Proje detay sayfası, galeri, bento grid ve bilgi kartı
+   ========================================================= */
+
+/* --- PROJECT DETAIL VIEW --- */
+.project-detail-container {
+    text-align: left;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #ff3e3e;
+    transform: translateX(-5px);
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+}
+
+.detail-left {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.pd-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Media Gallery */
+.media-gallery {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 40px;
+}
+
+.main-stage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-stage img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    min-width: 0;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.main-stage img:hover {
+    transform: scale(1.02);
+}
+
+.main-stage iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail-strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff3e3e #1a1a1a;
+}
+
+.thumbnail-strip::-webkit-scrollbar {
+    height: 6px;
+}
+.thumbnail-strip::-webkit-scrollbar-thumb {
+    background: #ff3e3e;
+    border-radius: 10px;
+}
+.thumbnail-strip::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 68px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail:hover {
+    border-color: #ff3e3e;
+    transform: translateY(-2px);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-thumb-icon {
+    font-size: 24px;
+    color: white;
+}
+
+/* Bento Grid */
+.breakdown-title {
+    font-size: 1.5rem;
+    color: #ff3e3e;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.bento-card {
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 62, 62, 0.3);
+}
+
+.bento-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.bento-title {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+}
+
+.bento-desc {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Right Column Info Card */
+.info-card {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    position: sticky;
+    top: 20px;
+}
+
+.info-title {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.info-overview {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+}
+
+.info-label {
+    color: #888;
+    font-weight: 600;
+}
+
+.info-value {
+    color: #fff;
+    font-weight: 600;
+    text-align: right;
+}
+
+.cta-btn {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    box-sizing: border-box;
+}
+
