@@ -28,17 +28,18 @@ Saf HTML + CSS + JavaScript ile yazılmıştır; derleme (build) adımı yoktur.
 │           └── mind-cafe/
 │
 ├── css/                         # index.html'de bu SIRAYLA yüklenir (cascade sırası önemli)
-│   ├── base.css                 # body, .container, görünüm geçiş animasyonu
+│   ├── base.css                 # renk tokenları, body, .container, görünüm geçişi
 │   ├── components/
-│   │   ├── top-actions.css      # Sağ üst: CV butonu + dil seçici
+│   │   ├── navbar.css           # Sabit üst bar: yer imleri, CV butonu, dil seçici
 │   │   ├── buttons.css          # .btn ve iletişim butonu
 │   │   └── lightbox.css         # Görsel büyütme penceresi
 │   ├── pages/
-│   │   ├── home-profile.css     # Profil foto, isim, bio kartı
+│   │   ├── home-profile.css     # Üst hero: profil foto, isim, kısa özet
 │   │   ├── home-projects.css    # Öne çıkan proje, filtreler, proje kartları
-│   │   ├── home-footer.css      # WIP kartı, sosyal linkler, footer
+│   │   ├── home-about.css       # Detaylı Hakkımda bölümü
+│   │   ├── home-footer.css      # WIP kartı, iletişim bölümü, sosyal linkler, footer
 │   │   └── project-detail.css   # Proje detay sayfası, galeri, bento grid
-│   └── responsive.css           # Mobil düzenlemeler — HER ZAMAN EN SONDA
+│   └── responsive.css           # Mobil/tablet düzenlemeler — HER ZAMAN EN SONDA
 │
 └── js/                          # index.html'de bu SIRAYLA yüklenir
     ├── data/

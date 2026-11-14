@@ -1,40 +1,72 @@
 /* =========================================================
-   HOME / FOOTER — WIP kartı, sosyal medya linkleri ve footer
+   HOME / FOOTER — WIP kartı, İletişim bölümü, sosyal medya ve footer
    ========================================================= */
 
 /* --- WIP CARD --- */
 .wip-card {
-    background: linear-gradient(145deg, #1a1a1a, #151515);
-    border: 1px dashed #ff3e3e;
-    border-radius: 12px;
-    padding: 35px;
-    margin-top: 50px;
+    background: linear-gradient(145deg, rgba(26, 28, 35, 0.9), rgba(20, 21, 26, 0.95));
+    border: 1px dashed rgba(255, 62, 62, 0.55);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-top: 32px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .wip-label {
-    color: #ff3e3e;
-    font-size: 0.95rem;
+    color: #ff6b6b;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
 }
 
 .wip-title {
-    font-size: 1.8rem;
+    font-size: 1.55rem;
     color: #fff;
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
     font-weight: 700;
+}
+
+.wip-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    margin-top: 72px;
+}
+
+.contact-card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 36px 28px;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact-lead {
+    margin: 0;
+    max-width: 500px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
 }
 
 /* --- SOCIAL LINKS --- */
 .social-links {
-    margin-top: 60px;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
@@ -42,33 +74,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    background-color: #1f1f1f;
-    border: 1px solid #333;
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
     border-radius: 50%;
-    color: #a0a0a0;
-    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .social-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     fill: currentColor;
 }
 
 .social-btn:hover {
-    background-color: #ff3e3e;
-    color: white;
-    border-color: #ff3e3e;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 62, 62, 0.4);
+    background-color: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    transform: translateY(-3px);
 }
 
 .footer {
-    margin-top: 70px;
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
     font-size: 0.85rem;
-    color: #666;
+    color: var(--text-muted);
     font-weight: 500;
 }
-

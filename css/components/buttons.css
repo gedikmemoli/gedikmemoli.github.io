@@ -2,46 +2,56 @@
    BUTTONS — Genel .btn butonu ve iletişim (e-posta) butonu
    ========================================================= */
 
-/* --- BUTTONS --- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
-    padding: 12px 32px;
-    background-color: #ff3e3e;
+    gap: 8px;
+    padding: 12px 28px;
+    background-color: var(--accent);
     color: white;
+    font-size: 0.95rem;
     font-weight: 700;
-    border-radius: 30px;
+    border-radius: 999px;
+    border: none;
+    text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
     white-space: nowrap;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(255, 62, 62, 0.3);
+    box-shadow: 0 4px 16px rgba(255, 62, 62, 0.25);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    background-color: #e62e2e;
-    box-shadow: 0 6px 20px rgba(255, 62, 62, 0.4);
+    transform: translateY(-2px);
+    background-color: var(--accent-hover);
+    box-shadow: 0 8px 22px rgba(255, 62, 62, 0.35);
 }
 
 .btn.expanded {
-    background-color: #1f1f1f;
-    border: 1px solid #ff3e3e;
+    background-color: var(--bg-elevated);
+    border: 1px solid rgba(255, 62, 62, 0.55);
     padding: 0;
     box-shadow: none;
 }
 
+.btn.expanded:hover {
+    background-color: rgba(255, 62, 62, 0.14);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
 .btn.expanded a {
-    display: block;
-    padding: 12px 40px;
-    color: #ff3e3e;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    color: #ff6b6b;
     text-decoration: none;
+    font-weight: 600;
     cursor: pointer;
 }
 
 .btn.expanded a:hover {
     color: #fff;
 }
-

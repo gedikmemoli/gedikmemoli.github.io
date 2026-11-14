@@ -19,6 +19,7 @@ const projectsData = [
             tr: "UI & Oyun Tasarımcısı"
         },
         thumbnail: "assets/images/projects/broken-dice/cover.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        thumbnailPosition: "center 72%",
         externalLink: "#", // İndirme / Mağaza linki
         media: [
             // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
@@ -57,6 +58,7 @@ const projectsData = [
             tr: "UI & Oyun Tasarımcısı"
         },
         thumbnail: "assets/images/projects/firuze/cover.webp", // Ana sayfada kartta görünecek resmin dosya yolu
+        featuredImage: "assets/images/projects/firuze/screenshot-2.webp", // Öne çıkan vitrinde sağda görünecek görsel
         externalLink: "https://gedikmemoli.itch.io/firuze", // İndirme / Mağaza linki
         media: [
             // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
@@ -223,6 +225,8 @@ const projectsData = [
             tr: "Rolünüz (örn., Oyun Tasarımcısı)"
         },
         thumbnail: "assets/images/projects/yeni-oyun-benzersiz-id/cover.png", // Ana sayfada kartta görünecek resmin dosya yolu
+        // thumbnailPosition: "center center", // (Opsiyonel) Kartta görsel odak noktası (örn: "center 70%")
+        // featuredImage: "assets/images/projects/yeni-oyun-benzersiz-id/screenshot-1.png", // (Opsiyonel) Öne çıkan vitrinde kullanılacak ayrı görsel
         externalLink: "https://store-link.com", // İndirme / Mağaza linki
         media: [
             // Galeri için resimler veya videolar ekleyin. İlk sıradaki varsayılan olarak büyük ekranda açılır.
