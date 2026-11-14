@@ -1,5 +1,5 @@
 /* =========================================================
-   UI — İletişim butonu ve lightbox (görsel büyütme)
+   UI - İletişim butonu ve lightbox (görsel büyütme)
    ========================================================= */
 
 function revealEmail() {

@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mehmet Ali Gedik — Game Designer portfolio showcasing Unity &amp; GameMaker projects, systems design, and playable prototypes.">
+    <meta name="description" content="Mehmet Ali Gedik: Game Designer portfolio showcasing Unity and GameMaker projects, systems design, and playable prototypes.">
     <title>Mehmet Ali Gedik | Game Designer</title>
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gedik.games/">
+    <meta property="og:title" content="Mehmet Ali Gedik | Game Designer">
+    <meta property="og:description" content="Game Designer portfolio showcasing Unity and GameMaker projects, systems design, and playable prototypes.">
+    <meta property="og:image" content="https://gedik.games/assets/images/projects/firuze/screenshot-1.webp">
+
+    <!-- Twitter / X Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mehmet Ali Gedik | Game Designer">
+    <meta name="twitter:description" content="Game Designer portfolio showcasing Unity and GameMaker projects, systems design, and playable prototypes.">
+    <meta name="twitter:image" content="https://gedik.games/assets/images/projects/firuze/screenshot-1.webp">
+
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 
-    <!-- STYLES: Sıralama önemlidir (CSS cascade). Yeni dosya eklerseniz responsive.css en sonda kalmalı. -->
+    <!-- Google Fonts: Questrial & Material Symbols Outlined -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+    <!-- STYLES: Siralama onemlidir (CSS cascade). Yeni dosya eklerseniz responsive.css en sonda kalmali. -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/buttons.css">
@@ -18,15 +38,13 @@
     <link rel="stylesheet" href="css/components/lightbox.css">
     <link rel="stylesheet" href="css/pages/home-footer.css">
     <link rel="stylesheet" href="css/responsive.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ÜST BAR (Navigasyon, CV & Dil Seçici) -->
+    <!-- UST BAR (Navigasyon, CV & Dil Secici) -->
     <header class="site-header">
         <div class="navbar-inner">
-            <a href="#top" class="nav-brand">GEDİK<span class="nav-brand-accent">.GAMES</span></a>
+            <a href="#top" class="nav-brand">gedik<span class="nav-brand-accent">.games</span></a>
 
             <nav class="nav-links" aria-label="Primary Navigation">
                 <a href="#games" class="nav-link" data-nav="games" data-i18n="navGames">Games</a>
@@ -35,12 +53,8 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="assets/docs/mehmet-ali-gedik-cv.pdf" target="_blank" download="Mehmet Ali Gedik – CV (Game Designer).pdf" class="nav-cv-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
+                <a href="assets/docs/mehmet-ali-gedik-cv.pdf" target="_blank" download="Mehmet Ali Gedik - CV (Game Designer).pdf" class="nav-cv-btn">
+                    <span class="material-symbols-outlined" aria-hidden="true">download</span>
                     <span data-i18n="downloadCV">Download CV</span>
                 </a>
                 <div class="lang-switch" role="group" aria-label="Language">
@@ -66,7 +80,7 @@
 
                 <div class="hero-bio">
                     <p class="hero-bio-text" data-i18n="heroBio">
-                        Digital Game Design student crafting mechanics-driven PC and mobile games in Unity and GameMaker — from dice-based roguelites to cozy management sims.
+                        Digital Game Design student crafting mechanics-driven PC and mobile games in Unity and GameMaker, from dice-based roguelites to cozy management sims.
                     </p>
                 </div>
             </section>
@@ -80,7 +94,7 @@
                     </p>
                 </div>
 
-                <!-- FEATURED PROJECT SHOWCASE (Oyunlar kısmının en başında) -->
+                <!-- FEATURED PROJECT SHOWCASE (Oyunlar kisminin en basinda) -->
                 <div id="featured-project-container">
                     <!-- Injected via JS -->
                 </div>
@@ -93,14 +107,17 @@
                     <button class="filter-btn" data-filter="Unity" data-i18n="filterUnity">Unity</button>
                 </div>
 
-                <!-- DYNAMIC PROJECTS GRID (Featured Project de kartlar arasında yer alır) -->
+                <!-- DYNAMIC PROJECTS GRID (Featured Project de kartlar arasinda yer alir) -->
                 <div id="projects-container" class="projects-grid">
                     <!-- Project cards will be injected here via JS -->
                 </div>
 
                 <!-- CURRENTLY WORKING ON -->
                 <div class="wip-card">
-                    <div class="wip-label" data-i18n="wipLabel">🚧 Currently Working On 🚧</div>
+                    <div class="wip-label">
+                        <span class="material-symbols-outlined wip-icon" aria-hidden="true">construction</span>
+                        <span data-i18n="wipLabel">Currently Working On</span>
+                    </div>
                     <h3 class="wip-title">Do Something but Don't Die</h3>
                     <p class="wip-desc" data-i18n="wipDesc">2D Roguelike Card Game</p>
                 </div>
@@ -119,10 +136,10 @@
                     <div class="about-card">
                         <h3 class="about-card-title" data-i18n="aboutStoryTitle">Design Approach &amp; Journey</h3>
                         <p class="about-paragraph" data-i18n="aboutP1">
-                            I am a Digital Game Design undergraduate at Kahramanmaraş Sütçü İmam University (2024–2028) based in Kemer, Antalya. My work centers on core gameplay loops, systems design, game economy balancing, and responsive player feedback.
+                            I am a Digital Game Design undergraduate at Kahramanmaraş Sütçü İmam University (2024-2028) based in Kemer, Antalya. My work centers on core gameplay loops, systems design, game economy balancing, and responsive player feedback.
                         </p>
                         <p class="about-paragraph" data-i18n="aboutP2">
-                            Across Unity, C#, and GameMaker, I have designed and prototyped six games spanning roguelite dungeon crawlers, shop management sims, platformers, and word puzzles. During my IT internship at Kemer Municipality, I designed and built Kelime Kültür Kemer to promote local culture and tourism through mobile gameplay.
+                            Across Unity and GameMaker, I have designed and prototyped six games spanning roguelite dungeon crawlers, shop management sims, platformers, and word puzzles. During my IT internship at Kemer Municipality, I designed and built Kelime Kültür Kemer to promote local culture and tourism through mobile gameplay.
                         </p>
 
                         <div class="about-skills-group">
@@ -132,7 +149,7 @@
                                 <span class="about-pill">Core Mechanics</span>
                                 <span class="about-pill">Economy &amp; Balancing</span>
                                 <span class="about-pill">Level Design</span>
-                                <span class="about-pill">Unity &amp; C#</span>
+                                <span class="about-pill">Unity</span>
                                 <span class="about-pill">GameMaker</span>
                                 <span class="about-pill">Agile / Trello</span>
                             </div>
@@ -143,28 +160,22 @@
                         <h3 class="about-card-title" data-i18n="aboutMilestonesTitle">Education &amp; Experience</h3>
                         <div class="about-list">
                             <div class="about-item">
-                                <span class="about-item-meta" data-i18n="expEduMeta">2024 – 2028 (Expected)</span>
+                                <span class="about-item-meta" data-i18n="expEduMeta">2024 - 2028 (Expected)</span>
                                 <strong class="about-item-title" data-i18n="expEduTitle">Kahramanmaraş Sütçü İmam University</strong>
-                                <p class="about-item-desc" data-i18n="expEduDesc">B.A. in Digital Game Design — Systems, Mechanics &amp; Level Design.</p>
+                                <p class="about-item-desc" data-i18n="expEduDesc">B.A. in Digital Game Design: Systems, Mechanics &amp; Level Design.</p>
                             </div>
 
                             <div class="about-item">
                                 <span class="about-item-meta" data-i18n="expInternMeta">July 2026 · Kemer, Antalya</span>
-                                <strong class="about-item-title" data-i18n="expInternTitle">IT Intern — Kemer Municipality</strong>
+                                <strong class="about-item-title" data-i18n="expInternTitle">IT Intern, Kemer Municipality</strong>
                                 <p class="about-item-desc" data-i18n="expInternDesc">Designed and developed Kelime Kültür Kemer, a mobile crossword puzzle showcasing local heritage.</p>
-                            </div>
-
-                            <div class="about-item">
-                                <span class="about-item-meta" data-i18n="expJamMeta">Game Jams &amp; Certifications</span>
-                                <strong class="about-item-title" data-i18n="expJamTitle">Rapid Prototyping &amp; Teamwork</strong>
-                                <p class="about-item-desc" data-i18n="expJamDesc">Game Jam Trabzon 2026, Akdeniz Game Jam, KİÜ Game Jam Team, and edX Generative AI for Games Development.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- İLETİŞİM -->
+            <!-- ILETISIM -->
             <section id="contact" class="contact-section page-section">
                 <div class="section-heading">
                     <h2 class="section-title" data-i18n="contactTitle">CONTACT</h2>
@@ -272,7 +283,7 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media preview">
     </div>
 
-    <!-- SCRIPTS: Sıralama önemlidir. Önce veriler, en son main.js -->
+    <!-- SCRIPTS: Siralama onemlidir. Once veriler, en son main.js -->
     <script src="js/data/projects.js"></script>
     <script src="js/data/translations.js"></script>
     <script src="js/i18n.js"></script>

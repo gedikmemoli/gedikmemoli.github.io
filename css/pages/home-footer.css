@@ -1,5 +1,5 @@
 /* =========================================================
-   HOME / FOOTER — WIP kartı, İletişim bölümü, sosyal medya ve footer
+   HOME / FOOTER - WIP karti, Iletisim bolumu, sosyal medya ve footer
    ========================================================= */
 
 /* --- WIP CARD --- */
@@ -14,12 +14,20 @@
 }
 
 .wip-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     color: #ff6b6b;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 10px;
+}
+
+.wip-icon {
+    font-size: 1.15rem;
 }
 
 .wip-title {

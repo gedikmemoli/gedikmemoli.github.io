@@ -1,5 +1,5 @@
 /* =========================================================
-   PROJECT DETAIL — Proje detay sayfası, galeri, bento grid ve bilgi kartı
+   PROJECT DETAIL - Proje detay sayfası, galeri, bento grid ve bilgi kartı
    ========================================================= */
 
 /* --- PROJECT DETAIL VIEW --- */
@@ -132,8 +132,14 @@
 }
 
 .video-thumb-icon {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+}
+
+.video-thumb-icon .material-symbols-outlined {
+    font-size: 32px;
 }
 
 /* Bento Grid */
@@ -166,8 +172,12 @@
 }
 
 .bento-icon {
-    font-size: 2rem;
     margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.bento-icon .material-symbols-outlined {
+    font-size: 2rem;
 }
 
 .bento-title {

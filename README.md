@@ -1,6 +1,6 @@
 # gedikmemoli.github.io
 
-Mehmet Ali Gedik — Game Designer portfolyo sitesi. Canlı adres: **https://gedik.games**
+Mehmet Ali Gedik - Game Designer portfolyo sitesi. Canlı adres: **https://gedik.games**
 
 Saf HTML + CSS + JavaScript ile yazılmıştır; derleme (build) adımı yoktur. GitHub Pages `main` dalını doğrudan yayınlar.
 
@@ -9,7 +9,7 @@ Saf HTML + CSS + JavaScript ile yazılmıştır; derleme (build) adımı yoktur.
 ```
 .
 ├── index.html                  # Tek sayfa (ana sayfa + proje detay görünümü)
-├── CNAME                       # Özel alan adı (gedik.games) — SİLMEYİN
+├── CNAME                       # Özel alan adı (gedik.games) - SİLMEYİN
 │
 ├── assets/
 │   ├── docs/
@@ -39,11 +39,11 @@ Saf HTML + CSS + JavaScript ile yazılmıştır; derleme (build) adımı yoktur.
 │   │   ├── home-about.css       # Detaylı Hakkımda bölümü
 │   │   ├── home-footer.css      # WIP kartı, iletişim bölümü, sosyal linkler, footer
 │   │   └── project-detail.css   # Proje detay sayfası, galeri, bento grid
-│   └── responsive.css           # Mobil/tablet düzenlemeler — HER ZAMAN EN SONDA
+│   └── responsive.css           # Mobil/tablet düzenlemeler - HER ZAMAN EN SONDA
 │
 └── js/                          # index.html'de bu SIRAYLA yüklenir
     ├── data/
-    │   ├── projects.js          # ⭐ Oyun listesi (yeni oyun buraya eklenir)
+    │   ├── projects.js          # Oyun listesi (yeni oyun buraya eklenir)
     │   └── translations.js      # EN / TR metinler
     ├── i18n.js                  # Dil değiştirme
     ├── render.js                # Kartlar, detay sayfası, galeri
@@ -57,6 +57,7 @@ Saf HTML + CSS + JavaScript ile yazılmıştır; derleme (build) adımı yoktur.
 1. Görselleri `assets/images/projects/<oyun-id>/` klasörüne koyun (ör. `cover.webp`, `screenshot-1.webp`).
 2. [`js/data/projects.js`](js/data/projects.js) dosyasının en altındaki **şablonu** kopyalayıp listeye ekleyin.
 3. `thumbnail` ve `media` yollarını `assets/images/projects/<oyun-id>/...` şeklinde yazın.
+4. Mekanik ikonlarında emoji yerine Google Fonts `Material Symbols Outlined` ikon adlarını kullanın (ör. `"casino"`, `"swords"`).
 
 HTML'e dokunmanıza gerek yoktur.
 
@@ -76,3 +77,4 @@ python3 -m http.server 8000
 
 - CSS ve JS dosyalarının `index.html` içindeki **yükleme sırasını değiştirmeyin**; orijinal tek dosyadaki kural sırası aynen korunmuştur.
 - Dosya adlarında Türkçe karakter ve boşluk kullanmayın (URL sorunlarını önler).
+- Sitedeki metinlerde emoji ve uzun tire (em dash) karakteri kullanmayın.
