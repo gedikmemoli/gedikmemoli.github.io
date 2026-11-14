@@ -1,5 +1,5 @@
 /* =========================================================
-   ROUTER — Hash tabanlı sayfa geçişi (#project-<id>) ve bölüm yer imleri
+   ROUTER - Hash tabanlı sayfa geçişi (#project-<id>) ve bölüm yer imleri
    ========================================================= */
 
 const SECTION_HASHES = new Set(['#games', '#about', '#contact', '#top']);

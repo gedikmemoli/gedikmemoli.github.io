@@ -1,5 +1,5 @@
 /* =========================================================
-   MAIN — Uygulamanın başlangıç noktası ve olay dinleyicileri.
+   MAIN - Uygulamanın başlangıç noktası ve olay dinleyicileri.
    Bu dosya her zaman EN SON yüklenmelidir.
    ========================================================= */
 

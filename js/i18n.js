@@ -1,5 +1,5 @@
 /* =========================================================
-   I18N — Aktif dil ve dil değiştirme
+   I18N - Aktif dil ve dil değiştirme
    ========================================================= */
 
 let currentLang = localStorage.getItem("lang") || "en";

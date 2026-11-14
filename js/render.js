@@ -1,5 +1,5 @@
 /* =========================================================
-   RENDER — Ana sayfa proje kartları, proje detay sayfası ve medya galerisi
+   RENDER - Ana sayfa proje kartları, proje detay sayfası ve medya galerisi
    ========================================================= */
 
 let currentFilter = "all";
@@ -102,7 +102,7 @@ function renderProjectDetail(projectId) {
             const thumb = document.createElement('div');
             thumb.className = 'thumbnail';
             if (m.type === 'video') {
-                thumb.innerHTML = `<div class="video-thumb-icon">▶</div>`;
+                thumb.innerHTML = `<div class="video-thumb-icon"><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></div>`;
                 thumb.style.backgroundColor = '#333';
             } else {
                 thumb.innerHTML = `<img src="${m.url}" alt="thumbnail">`;
@@ -119,7 +119,7 @@ function renderProjectDetail(projectId) {
     project.mechanics[currentLang].forEach(mech => {
         bento.innerHTML += `
             <div class="bento-card">
-                <div class="bento-icon">${mech.icon}</div>
+                <div class="bento-icon"><span class="material-symbols-outlined" aria-hidden="true">${mech.icon}</span></div>
                 <h4 class="bento-title">${mech.title}</h4>
                 <p class="bento-desc">${mech.desc}</p>
             </div>
